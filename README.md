@@ -96,13 +96,13 @@ The BlueConic SDK for iOS enables you to set and retrieve profile property value
 ```Swift
 import BlueConicClient
 
-let client = BlueConicClient.getInstance(self)
+let client = BlueConic.getInstance(self)
 ```
 
 ```Objective-C
-#import <BlueConicClient/BlueConicClient-swift.h>
+#import <BlueConicClient/BlueConic-swift.h>
 
-BlueConicClient *client = [BlueConicClient getInstance:self];
+BlueConic *client = [BlueConic getInstance:self];
 ```
 Make sure that you provide the current ViewController as argument when invoking getInstance. If no ViewController is available, pass an empty ViewController.
 
@@ -110,7 +110,7 @@ After you have added the URL Scheme value, select the AppDelegate class and add 
 ```Swift
 // in the AppDelegate.swift file
 func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-    BlueConicClient.getInstance(nil).setURL(url)
+    BlueConic.getInstance(nil).setURL(url)
     return true
 }
 ```
@@ -118,14 +118,14 @@ func application(application: UIApplication, openURL url: NSURL, sourceApplicati
 ```Objective-C
 // in the AppDelegate.m file
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    [[BlueConicClient getInstance:nil] setURL:url];
+    [[BlueConic getInstance:nil] setURL:url];
     return YES;
 }
 ```
 
 ## Using the BlueConic SDK
 
-**Retrieve an instance of the BlueConicClient in the `viewDidAppear(animated: Bool)` of every ViewController and create a PAGEVIEW event:**
+**Retrieve an instance of BlueConic in the `viewDidAppear(animated: Bool)` of every ViewController and create a PAGEVIEW event:**
 On the instance call `createEvent` with a properties map that holds the screenName. The screen name is shown in the Journey Simulator and it can be used in listener rules or to restrict interactions to specific screens. Make sure that you provide the current ViewController as argument when invoking "getInstance" on the BlueConicClient. If no ViewController is available, pass an empty ViewController.
 
 ```Swift
@@ -134,22 +134,22 @@ import UIKit
 import BlueConicClient
 
 class ExampleViewController: UIViewController {
-  private var _blueConicClient: BlueConicClient?
+  private var _blueConic: BlueConic?
 
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    // Get the BlueConicClient instance.
-    self._blueConicClient = BlueConicClient.getInstance(self)
+    // Get the BlueConic instance.
+    self._blueConic = BlueConic.getInstance(self)
 
     // Set screen name to identify the ViewController
-    self._blueConicClient?.createEvent("PAGEVIEW", properties: ["screenName": "Main/ExampleViewController"])
+    self._blueConic?.createEvent("PAGEVIEW", properties: ["screenName": "Main/ExampleViewController"])
   }
 }
 ```
 ```Objective-C
 in the ExampleViewController.h file
 #import <UIKit/UIKit.h>
-#import <BlueConicClient/BlueConicClient-Swift.h>
+#import <BlueConicClient/BlueConic-Swift.h>
 
 @interface ExampleViewController : UIViewController
 @end
@@ -159,7 +159,7 @@ in the ExampleViewController.h file
 
 @interface ExampleViewController ()
 
-@property BlueConicClient* client;
+@property BlueConic* client;
 
 @end
 
@@ -168,7 +168,7 @@ in the ExampleViewController.h file
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
   // Get the BlueConic instance
-  self.client = [BlueConicClient getInstance:self];
+  self.client = [BlueConic getInstance:self];
 
   // Set screen name to identify the ViewController
   [self.client createEvent:@"PAGEVIEW" properties:@{@"screenName": @"MAIN/ExampleViewController"}];
@@ -181,11 +181,11 @@ in the ExampleViewController.h file
 **Retrieving and storing profile properties:**
 The BlueConic SDK for iOS enables you to set and retrieve profile property values for a BlueConic profile. These methods can be used anywhere in the app. The following example counts the number of times a specific activity is opened and stores this number in the BlueConic profile:
 ```Swift
-// Get the BlueConicClient instance.
-self._blueConicClient = BlueConicClient.getInstance(self)
+// Get the BlueConic instance.
+self._blueConic = BlueConic.getInstance(self)
 
 // Get the current value from the profile, this value is returned as a String.
-let profileValue: String? = self._blueConicClient?.getProfileValue(self.PROPERTY_ID)
+let profileValue: String? = self._blueConic?.getProfileValue(self.PROPERTY_ID)
 
 var newValue = 1
 if (profileValue != nil && Int(profileValue!) != nil) {
@@ -193,12 +193,12 @@ if (profileValue != nil && Int(profileValue!) != nil) {
 }
 
 // Set the new value in the profile
-self._blueConicClient?.setProfileValue(self.PROPERTY_ID, value:String(newValue))
+self._blueConic?.setProfileValue(self.PROPERTY_ID, value:String(newValue))
 ```
 
 ```Objective-C
 // Get the BlueConic instance
-self.client = [BlueConicClient getInstance:self];
+self.client = [BlueConic getInstance:self];
 
 // Get the current value from the profile, this value is returned as a String.
 NSString* profileValue = [self.client getProfileValue:PROPERTY_ID];
@@ -241,7 +241,7 @@ This can be done in a storyboard. Open your storyboard and click on the 'Assista
 
 The position id of this element is 'viewName' and can be used in the Universe as '#viewName'. The BlueConic SDK currently only supports selecting elements using their ids.
 
-## BlueConicClient Methods
+## BlueConic Methods
 
 Implementation of the BlueConic client, handling the profile retrieval and storage. This may be from cache, persistent storage on the client or direct requests to the BlueConic server.
 
@@ -249,17 +249,17 @@ Implementation of the BlueConic client, handling the profile retrieval and stora
 import BlueConicClient
 ```
 ```Objective-C
-#import <BlueConicClient/BlueConicClient-Swift.h>
+#import <BlueConicClient/BlueConic-Swift.h>
 ```
 
-### getInstance(context: UIViewController?) -> BlueConicClient
+### getInstance(context: UIViewController?) -> BlueConic
 Get an instance of the BlueConic client.
 
 ```Swift
-let client: BlueConicClient = BlueConicClient.getInstance(self)
+let client: BlueConic = BlueConic.getInstance(self)
 ```
 ```Objecitive-C
-BlueConicClient *client = [BlueConicClient getInstance:self];
+BlueConic *client = [BlueConic getInstance:self];
 ```
 
 ### getProfileValue(property: String) -> String
@@ -386,14 +386,14 @@ Checks whether the app was started with simulator data. If so we try to get the 
 ```Swift
 // Implement in AppDelegate.swift
 func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-    BlueConicClient.getInstance(nil).setURL(url)
+    BlueConic.getInstance(nil).setURL(url)
     return true
 }
 ```
 ```Objecitive-C
 // Implement in AppDelegate.m
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    [[BlueConicClient getInstance:nil] setURL:url];
+    [[BlueConic getInstance:nil] setURL:url];
     return YES;
 }
 ```
@@ -474,15 +474,15 @@ NSString *position = [context getPositionIdentifier];
 ## BlueConicPlugin Methods
 Interface BlueConicPlugin
 
-### init(client: BlueConicClient, context: InteractionContext)
+### init(client: BlueConic, context: InteractionContext)
 Creates a new Plugin instance with Client and an InteractionContext. Function should be overwritten by the Client-plugins.
 ```Swift
-public required convenience init(client: BlueConicClient, context: InteractionContext) {
+public required convenience init(client: BlueConic, context: InteractionContext) {
     self.init()
 }
 ```
 ```Objecitive-C
-- (instancetype) initWithClient: (BlueConicClient *)client context:(InteractionContext *)context {
+- (instancetype) initWithClient: (BlueConic *)client context:(InteractionContext *)context {
     self = [super init];
     return self;
 }

@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		iC4+8tbbo9IK26RRRpqKQkk04dw=
+		XGXQJjPuD+ckDShlplSH1DPQp50=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Q+DAr2pQig8R1WouGGtjYnPo5Ng=
+		pSaNhgFqGhvYmN/OwVygMGrzdVg=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		biOctqYL78jhF+aukpT8rv7/FKM=
+		Kq3oF5ULrsRymuD8faP2yWagrgY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -140,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WnoWLd8mZpJKQf3ufkFUWt1cxTZEu6zP6LzOEQIrRtA=
+			mzkg1cY2IGgwQKQR114lMYyYh6mVl02Awcbs+gBhMBM=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -175,7 +175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wpNtvRq+EZOT/BnnO0S8bUPowfaWqIeZ9rdJKWmDBbY=
+			9TpQi4qc40RH10DAALE5xrFnjf12HJ4CGcCqXy3zTLg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

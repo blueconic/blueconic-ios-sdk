@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] 2023-10-26
+
+### Added
+- Support for Binary Framework
+- Support for Swift Package Manager
+
+### Changed
+- Updated minimum iOS version requirement to 12
+- The main api class renamed from 'BlueConicClient' to 'BlueConic'
+
 ## [2.9.0] 2023-9-4
 
 ### Added

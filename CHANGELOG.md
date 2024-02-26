@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.1.0] 2024-02-23
+
+### Added
+- Internal tracking for React Native usage
+
 ## [3.0.0] 2023-10-26
 
 ### Added

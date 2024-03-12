@@ -1,28 +1,28 @@
 # Podspec for BlueConicClient
 Pod::Spec.new do |spec|
 
-# BlueConic General
-spec.name          = 'BlueConicClient'
-spec.version       = '3.1.0'
-spec.license       = { :type => 'Commercial' }
-spec.swift_version = '5.8.1'
-spec.homepage      = 'https://blueconic.com'
-spec.authors       = { 'BlueConic' => 'info@blueconic.com' }
-spec.summary       = 'The BlueConicClient Framework provides the basis for communication with BlueConic.'
+    # BlueConic General
+    spec.name               = 'BlueConicClient'
+    spec.version            = '3.2.0'
+    spec.license            = { :type => 'Commercial', :file => 'LICENSE' }
+    spec.swift_version      = '5.8.1'
+    spec.homepage           = 'https://blueconic.com'
+    spec.authors            = { 'BlueConic' => 'info@blueconic.com' }
+    spec.summary            = 'The BlueConicClient Framework provides the basis for communication with BlueConic.'
+    spec.documentation_url  = 'https://support.blueconic.com/hc/en-us/articles/202527912-BlueConic-SDK-for-iOS'
+    spec.changelog          = 'https://github.com/blueconic/blueconic-ios-sdk/blob/main/CHANGELOG.md'
 
-# BlueConic Sources
-spec.platform     = :ios, '12.0'
-spec.source     = { :http => 'https://download.blueconic.com/cocoapod/BlueConic-iOS-SDK-3.1.0-Source.zip', :flatten => true}
-spec.source_files = 'BlueConicClient/BlueConicClient.h'
-spec.default_subspec = 'main'
+    # BlueConic Resources
+    spec.resources = ['BlueConicClient.xcframework/ios-arm64/*.{png}', 'BlueConicClient.xcframework/ios-arm64/*/*.{png}']
 
-# BlueConic Resources
-spec.resources = ['BlueConicClient/Resources/*.{png}', 'BlueConicClient/Resources/**/*.{png}']
+    # BlueConic Sources
+    spec.platform           = :ios, '12.0'
+    spec.source             = { :git => 'https://github.com/blueconic/blueconic-ios-sdk.git', :tag => "#{spec.version}" }
+    spec.default_subspec    = 'Core'
 
-# main
-# has dependencies on all
-spec.subspec 'main' do |sm|
-    sm.source_files = 'BlueConicClient/**/*'
-    sm.exclude_files = 'BlueConicClient/Info.plist', 'BlueConicClient/Resources/**/*'
-end
+    # Core Subspec
+    spec.subspec 'Core' do |core|
+        core.preserve_paths = 'BlueConicClient.xcframework'
+        core.vendored_frameworks = 'BlueConicClient.xcframework'
+    end
 end

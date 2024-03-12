@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.2.0] 2024-03-12
+
+### Added
+- Privacy Manifest as required by Apple Privacy Guidelines.
+- SDK Code signing.
+
 ## [3.1.0] 2024-02-23
 
 ### Added

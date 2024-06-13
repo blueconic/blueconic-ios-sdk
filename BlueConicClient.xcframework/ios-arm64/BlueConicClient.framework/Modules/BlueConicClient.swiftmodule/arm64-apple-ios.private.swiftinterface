@@ -82,8 +82,10 @@ import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class BlueConic : ObjectiveC.NSObject {
   @objc public class func getInstance(_ context: UIKit.UIViewController?) -> BlueConicClient.BlueConic
   @objc public class func getInstance() -> BlueConicClient.BlueConic
+  @objc public func setContext(_ context: UIKit.UIViewController?)
   @objc public func getProfileValue(_ property: Swift.String) -> Swift.String
   @objc public func getProfileValues(_ property: Swift.String) -> [Swift.String]?
+  @objc public func getAllProfileProperties() -> [Swift.String : [Swift.String]]
   @objc public func getViewController() -> UIKit.UIViewController?
   @objc public func getView(_ selector: Swift.String) -> UIKit.UIView?
   @objc public func getScreenName() -> Swift.String
@@ -95,6 +97,7 @@ import _SwiftConcurrencyShims
   @objc public func setEnabled(_ isEnabled: Swift.Bool)
   @objc public func isEnabled() -> Swift.Bool
   @objc public func getProfileId() -> Swift.String?
+  @objc public func clearProfileId()
   @objc public func setProfileValues(_ name: Swift.String, values: [Swift.String])
   @objc public func setLocale(_ locale: Swift.String)
   @objc public func setURL(url: Foundation.URL) -> Swift.Bool
@@ -113,6 +116,8 @@ import _SwiftConcurrencyShims
   @objc public func createEvent(_ eventType: Swift.String, data: [Swift.String : Any]?, completion: (() -> Swift.Void)? = nil)
   @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?)
   @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?, completion: (() -> Swift.Void)? = nil)
+  @objc public func createTimelineEvent(_ eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], completion: (() -> Swift.Void)? = nil)
+  @objc public func createTimelineEventById(_ eventId: Swift.String, eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], completion: (() -> Swift.Void)? = nil)
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass)
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass, className: Swift.String)
   @objc public func getSegments() -> [BlueConicClient.BlueConicSegment]
@@ -613,6 +618,14 @@ public enum OperationType : Swift.String {
   @objc public func onLoad()
   @objc public func onDestroy()
   @objc deinit
+}
+extension Swift.KeyedEncodingContainer {
+  public mutating func encode(_ value: [Swift.String : Any], forKey key: Swift.KeyedEncodingContainer<K>.Key) throws
+  public mutating func encode(_ value: [Any], forKey key: Swift.KeyedEncodingContainer<K>.Key) throws
+}
+extension Swift.KeyedDecodingContainer {
+  public func decode(_ type: [Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Any]
+  public func decode(_ type: [Swift.String : Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Swift.String : Any]
 }
 @objc public class AdvancedEvent : BlueConicClient.Event {
   @objc public var eventName: Swift.String

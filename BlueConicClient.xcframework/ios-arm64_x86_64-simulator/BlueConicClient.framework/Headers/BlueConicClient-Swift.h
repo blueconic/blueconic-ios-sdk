@@ -351,6 +351,7 @@ SWIFT_CLASS("_TtC15BlueConicClient10BCLightbox")
 @end
 
 @class UIView;
+@class NSDate;
 @class BlueConicSegment;
 
 SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
@@ -383,6 +384,8 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 + (BlueConic * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Manually set the ViewController context for the current instance of BlueConicClient.
+- (void)setContext:(UIViewController * _Nullable)context;
 /// Returns the first value for a given profile property.
 /// <h4>Example</h4>
 /// <pre&gt:
@@ -411,6 +414,8 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// returns:
 /// A collection containing the values.
 - (NSArray<NSString *> * _Nullable)getProfileValues:(NSString * _Nonnull)property SWIFT_WARN_UNUSED_RESULT;
+/// Returns all the profile properties stored for the user.
+- (NSDictionary<NSString *, NSArray<NSString *> *> * _Nonnull)getAllProfileProperties SWIFT_WARN_UNUSED_RESULT;
 /// Returns the current ViewController.
 /// <h4>Example</h4>
 /// <pre&gt:
@@ -573,6 +578,8 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// returns:
 /// The ID of the profile
 - (NSString * _Nullable)getProfileId SWIFT_WARN_UNUSED_RESULT;
+/// Removes the currently stored ID of the profile
+- (void)clearProfileId;
 /// Sets values on the profile. Passing a property that was already set with values will cause for the old values to be removed.
 /// <h4>Example</h4>
 /// <pre&gt:
@@ -825,6 +832,30 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// \param completion Completion handler
 ///
 - (void)createEvent:(NSString * _Nonnull)eventType properties:(NSDictionary<NSString *, NSString *> * _Nullable)properties completion:(void (^ _Nullable)(void))completion;
+/// Registers an event on the timeline of the profile with the given properties.
+/// Note that when using this method, the ID of the timeline event will be an automatically generated UUID.
+/// \param eventType The type of the Timeline event.
+///
+/// \param eventDate The date of the Timeline event.
+///
+/// \param properties A map with properties for the event.
+///
+/// \param callback The callback function when results are ready.
+///
+- (void)createTimelineEvent:(NSString * _Nonnull)eventType eventDate:(NSDate * _Nonnull)eventDate properties:(NSDictionary<NSString *, id> * _Nonnull)properties completion:(void (^ _Nullable)(void))completion;
+/// Registers an event on the timeline of the profile with the given properties.
+/// Note that when using this method, the ID of the timeline event will be an automatically generated UUID.
+/// \param eventId The ID of the Timeline event.
+///
+/// \param eventType The type of the Timeline event.
+///
+/// \param eventDate The date of the Timeline event.
+///
+/// \param properties A map with properties for the event.
+///
+/// \param callback The callback function when results are ready.
+///
+- (void)createTimelineEventById:(NSString * _Nonnull)eventId eventType:(NSString * _Nonnull)eventType eventDate:(NSDate * _Nonnull)eventDate properties:(NSDictionary<NSString *, id> * _Nonnull)properties completion:(void (^ _Nullable)(void))completion;
 /// Register plugin class. Assign a custom plugin to the list of available plugins.
 /// Which are then validated during the PAGEVIEW event, which creates and executes the correct plugin for you.
 /// <h4>Example</h4>
@@ -1541,6 +1572,7 @@ SWIFT_CLASS("_TtC15BlueConicClient10BCLightbox")
 @end
 
 @class UIView;
+@class NSDate;
 @class BlueConicSegment;
 
 SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
@@ -1573,6 +1605,8 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 + (BlueConic * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Manually set the ViewController context for the current instance of BlueConicClient.
+- (void)setContext:(UIViewController * _Nullable)context;
 /// Returns the first value for a given profile property.
 /// <h4>Example</h4>
 /// <pre&gt:
@@ -1601,6 +1635,8 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// returns:
 /// A collection containing the values.
 - (NSArray<NSString *> * _Nullable)getProfileValues:(NSString * _Nonnull)property SWIFT_WARN_UNUSED_RESULT;
+/// Returns all the profile properties stored for the user.
+- (NSDictionary<NSString *, NSArray<NSString *> *> * _Nonnull)getAllProfileProperties SWIFT_WARN_UNUSED_RESULT;
 /// Returns the current ViewController.
 /// <h4>Example</h4>
 /// <pre&gt:
@@ -1763,6 +1799,8 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// returns:
 /// The ID of the profile
 - (NSString * _Nullable)getProfileId SWIFT_WARN_UNUSED_RESULT;
+/// Removes the currently stored ID of the profile
+- (void)clearProfileId;
 /// Sets values on the profile. Passing a property that was already set with values will cause for the old values to be removed.
 /// <h4>Example</h4>
 /// <pre&gt:
@@ -2015,6 +2053,30 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// \param completion Completion handler
 ///
 - (void)createEvent:(NSString * _Nonnull)eventType properties:(NSDictionary<NSString *, NSString *> * _Nullable)properties completion:(void (^ _Nullable)(void))completion;
+/// Registers an event on the timeline of the profile with the given properties.
+/// Note that when using this method, the ID of the timeline event will be an automatically generated UUID.
+/// \param eventType The type of the Timeline event.
+///
+/// \param eventDate The date of the Timeline event.
+///
+/// \param properties A map with properties for the event.
+///
+/// \param callback The callback function when results are ready.
+///
+- (void)createTimelineEvent:(NSString * _Nonnull)eventType eventDate:(NSDate * _Nonnull)eventDate properties:(NSDictionary<NSString *, id> * _Nonnull)properties completion:(void (^ _Nullable)(void))completion;
+/// Registers an event on the timeline of the profile with the given properties.
+/// Note that when using this method, the ID of the timeline event will be an automatically generated UUID.
+/// \param eventId The ID of the Timeline event.
+///
+/// \param eventType The type of the Timeline event.
+///
+/// \param eventDate The date of the Timeline event.
+///
+/// \param properties A map with properties for the event.
+///
+/// \param callback The callback function when results are ready.
+///
+- (void)createTimelineEventById:(NSString * _Nonnull)eventId eventType:(NSString * _Nonnull)eventType eventDate:(NSDate * _Nonnull)eventDate properties:(NSDictionary<NSString *, id> * _Nonnull)properties completion:(void (^ _Nullable)(void))completion;
 /// Register plugin class. Assign a custom plugin to the list of available plugins.
 /// Which are then validated during the PAGEVIEW event, which creates and executes the correct plugin for you.
 /// <h4>Example</h4>

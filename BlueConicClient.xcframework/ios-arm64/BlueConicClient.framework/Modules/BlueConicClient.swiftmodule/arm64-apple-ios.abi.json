@@ -440,6 +440,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -2200,6 +2210,42 @@
           },
           {
             "kind": "Function",
+            "name": "setContext",
+            "printedName": "setContext(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)setContext:",
+            "mangledName": "$s15BlueConicClient0aB0C10setContextyySo16UIViewControllerCSgF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getProfileValue",
             "printedName": "getProfileValue(_:)",
             "children": [
@@ -2264,6 +2310,51 @@
             "declKind": "Func",
             "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getProfileValues:",
             "mangledName": "$s15BlueConicClient0aB0C16getProfileValuesySaySSGSgSSF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAllProfileProperties",
+            "printedName": "getAllProfileProperties()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : [Swift.String]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getAllProfileProperties",
+            "mangledName": "$s15BlueConicClient0aB0C23getAllProfilePropertiesSDySSSaySSGGyF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -2617,6 +2708,28 @@
             "declKind": "Func",
             "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getProfileId",
             "mangledName": "$s15BlueConicClient0aB0C12getProfileIdSSSgyF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearProfileId",
+            "printedName": "clearProfileId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)clearProfileId",
+            "mangledName": "$s15BlueConicClient0aB0C14clearProfileIdyyF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -3354,6 +3467,170 @@
             "declKind": "Func",
             "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)createEvent:properties:completion:",
             "mangledName": "$s15BlueConicClient0aB0C11createEvent_10properties10completionySS_SDyS2SGSgyycSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createTimelineEvent",
+            "printedName": "createTimelineEvent(_:eventDate:properties:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)createTimelineEvent:eventDate:properties:completion:",
+            "mangledName": "$s15BlueConicClient0aB0C19createTimelineEvent_9eventDate10properties10completionySS_10Foundation0H0VSDySSypGyycSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createTimelineEventById",
+            "printedName": "createTimelineEventById(_:eventType:eventDate:properties:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)createTimelineEventById:eventType:eventDate:properties:completion:",
+            "mangledName": "$s15BlueConicClient0aB0C23createTimelineEventById_9eventType0I4Date10properties10completionySS_SS10Foundation0K0VSDySSypGyycSgtF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -14050,6 +14327,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -14882,6 +15169,16 @@
             "usr": "c:@M@BlueConicClient@objc(pl)BlueConicPlugin",
             "mangledName": "$s15BlueConicClient0aB6PluginP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -17756,6 +18053,302 @@
             "mangledName": "$ss7CVarArgP"
           }
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyedEncodingContainer",
+        "printedName": "KeyedEncodingContainer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:s22KeyedEncodingContainerV15BlueConicClientE6encode_6forKeyySDySSypG_xtKF",
+            "mangledName": "$ss22KeyedEncodingContainerV15BlueConicClientE6encode_6forKeyySDySSypG_xtKF",
+            "moduleName": "BlueConicClient",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.CodingKey>",
+            "sugared_genericSig": "<K where K : Swift.CodingKey>",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:s22KeyedEncodingContainerV15BlueConicClientE6encode_6forKeyySayypG_xtKF",
+            "mangledName": "$ss22KeyedEncodingContainerV15BlueConicClientE6encode_6forKeyySayypG_xtKF",
+            "moduleName": "BlueConicClient",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.CodingKey>",
+            "sugared_genericSig": "<K where K : Swift.CodingKey>",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "Mutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:s22KeyedEncodingContainerV",
+        "mangledName": "$ss22KeyedEncodingContainerV",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.CodingKey>",
+        "sugared_genericSig": "<K where K : Swift.CodingKey>",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "KeyedEncodingContainerProtocol",
+            "printedName": "KeyedEncodingContainerProtocol",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Key",
+                "printedName": "Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s30KeyedEncodingContainerProtocolP",
+            "mangledName": "$ss30KeyedEncodingContainerProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyedDecodingContainer",
+        "printedName": "KeyedDecodingContainer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "decode",
+            "printedName": "decode(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "[Any].Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:s22KeyedDecodingContainerV15BlueConicClientE6decode_6forKeySayypGAFm_xtKF",
+            "mangledName": "$ss22KeyedDecodingContainerV15BlueConicClientE6decode_6forKeySayypGAFm_xtKF",
+            "moduleName": "BlueConicClient",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.CodingKey>",
+            "sugared_genericSig": "<K where K : Swift.CodingKey>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decode",
+            "printedName": "decode(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "[Swift.String : Any].Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:s22KeyedDecodingContainerV15BlueConicClientE6decode_6forKeySDySSypGAFm_xtKF",
+            "mangledName": "$ss22KeyedDecodingContainerV15BlueConicClientE6decode_6forKeySDySSypGAFm_xtKF",
+            "moduleName": "BlueConicClient",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.CodingKey>",
+            "sugared_genericSig": "<K where K : Swift.CodingKey>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:s22KeyedDecodingContainerV",
+        "mangledName": "$ss22KeyedDecodingContainerV",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.CodingKey>",
+        "sugared_genericSig": "<K where K : Swift.CodingKey>",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "KeyedDecodingContainerProtocol",
+            "printedName": "KeyedDecodingContainerProtocol",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Key",
+                "printedName": "Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s30KeyedDecodingContainerProtocolP",
+            "mangledName": "$ss30KeyedDecodingContainerProtocolP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -18156,30 +18749,37 @@
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 354,
+      "offset": 412,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
       "kind": "StringLiteral",
-      "offset": 11143,
+      "offset": 12402,
       "length": 28,
       "value": "\"BlueConicClient.BlueConicPropertyCommitEntry\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 13767,
+      "offset": 15026,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
       "kind": "StringLiteral",
-      "offset": 13654,
+      "offset": 14913,
       "length": 25,
       "value": "\"BlueConicClient.BlueConicEventCommitEntry\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
+      "kind": "StringLiteral",
+      "offset": 17192,
+      "length": 28,
+      "value": "\"BlueConicClient.BlueConicTimelineCommitEntry\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
@@ -19173,7 +19773,7 @@
       "kind": "StringLiteral",
       "offset": 909,
       "length": 7,
-      "value": "\"3.2.0\""
+      "value": "\"3.3.0\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
@@ -19395,462 +19995,518 @@
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3535,
+      "offset": 3516,
+      "length": 21,
+      "value": "\"createTimelineEvent\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3608,
       "length": 11,
       "value": "\"profileId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3583,
+      "offset": 3656,
       "length": 8,
       "value": "\"zoneId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3635,
+      "offset": 3708,
       "length": 13,
       "value": "\"forceCreate\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3694,
+      "offset": 3767,
       "length": 6,
       "value": "\"true\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3756,
+      "offset": 3829,
       "length": 18,
       "value": "\"mobile_app_ad_id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3859,
+      "offset": 3932,
       "length": 3,
       "value": "\"s\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3928,
+      "offset": 4001,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3967,
+      "offset": 4040,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4009,
+      "offset": 4082,
       "length": 13,
       "value": "\"pluginClass\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4059,
+      "offset": 4132,
       "length": 8,
       "value": "\"locale\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4112,
+      "offset": 4185,
       "length": 15,
       "value": "\"defaultLocale\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4162,
+      "offset": 4235,
       "length": 21,
       "value": "\"myInteractionTypeId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4227,
+      "offset": 4300,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4275,
+      "offset": 4348,
       "length": 14,
       "value": "\"myPluginType\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4335,
+      "offset": 4408,
       "length": 10,
       "value": "\"PAGEVIEW\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4396,
+      "offset": 4469,
       "length": 17,
       "value": "\"timelineContext\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4459,
+      "offset": 4532,
       "length": 13,
       "value": "\"interaction\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4519,
+      "offset": 4592,
       "length": 14,
       "value": "\"interactions\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4576,
+      "offset": 4649,
       "length": 10,
       "value": "\"position\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4630,
+      "offset": 4703,
       "length": 14,
       "value": "\"positionName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4685,
+      "offset": 4758,
       "length": 12,
       "value": "\"parameters\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4739,
+      "offset": 4812,
       "length": 12,
       "value": "\"dialogueId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4795,
+      "offset": 4868,
       "length": 14,
       "value": "\"dialogueName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4883,
+      "offset": 4956,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4928,
+      "offset": 5001,
       "length": 12,
       "value": "\"parameters\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4980,
+      "offset": 5053,
       "length": 11,
       "value": "\"parameter\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5037,
+      "offset": 5110,
       "length": 13,
       "value": "\"connections\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5112,
+      "offset": 5185,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5151,
+      "offset": 5224,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5200,
+      "offset": 5273,
       "length": 10,
       "value": "\"segments\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5281,
+      "offset": 5354,
       "length": 9,
       "value": "\"entries\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5331,
+      "offset": 5404,
       "length": 8,
       "value": "\"values\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5378,
+      "offset": 5451,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5421,
+      "offset": 5494,
       "length": 12,
       "value": "\"identifier\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5498,
+      "offset": 5571,
       "length": 11,
       "value": "\"eventtype\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5546,
+      "offset": 5619,
       "length": 17,
       "value": "\"eventidentifier\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5603,
+      "offset": 5676,
       "length": 12,
       "value": "\"eventcount\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5654,
+      "offset": 5727,
       "length": 10,
       "value": "\"PAGEVIEW\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5700,
+      "offset": 5773,
       "length": 7,
       "value": "\"CLICK\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5742,
+      "offset": 5815,
       "length": 6,
       "value": "\"VIEW\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5789,
+      "offset": 5862,
       "length": 12,
       "value": "\"CONVERSION\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5874,
+      "offset": 5947,
       "length": 9,
       "value": "\"DEFAULT\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5930,
+      "offset": 6003,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5989,
+      "offset": 6062,
       "length": 13,
       "value": "\"BCSessionID\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6052,
+      "offset": 6125,
       "length": 12,
       "value": "\"text\/plain\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6113,
+      "offset": 6186,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6179,
+      "offset": 6252,
       "length": 17,
       "value": "\"Accept-Encoding\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6248,
+      "offset": 6321,
       "length": 6,
       "value": "\"gzip\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6293,
+      "offset": 6366,
       "length": 9,
       "value": "\"referer\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 6438,
+      "length": 9,
+      "value": "\"profile\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 6474,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 6517,
+      "length": 15,
+      "value": "\"interactionId\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 6567,
+      "length": 13,
+      "value": "\"eventSource\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 6611,
+      "length": 9,
+      "value": "\"eventId\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 6652,
+      "length": 11,
+      "value": "\"timestamp\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 6690,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 6394,
+      "offset": 6788,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 6398,
+      "offset": 6792,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 6403,
+      "offset": 6797,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6448,
+      "offset": 6842,
       "length": 26,
       "value": "\"mobile_app_sessionlength\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6565,
+      "offset": 6959,
       "length": 15,
       "value": "\"mobile_app_id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6615,
+      "offset": 7009,
       "length": 17,
       "value": "\"mobile_app_name\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6675,
+      "offset": 7069,
       "length": 24,
       "value": "\"mobile_app_nameversion\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6732,
+      "offset": 7126,
       "length": 15,
       "value": "\"mobile_app_os\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6788,
+      "offset": 7182,
       "length": 22,
       "value": "\"mobile_app_osversion\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6847,
+      "offset": 7241,
       "length": 19,
       "value": "\"mobile_app_vendor\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6902,
+      "offset": 7296,
       "length": 18,
       "value": "\"mobile_app_model\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6961,
+      "offset": 7355,
       "length": 23,
       "value": "\"mobile_app_resolution\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7024,
+      "offset": 7418,
       "length": 22,
       "value": "\"mobile_app_pageviews\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7095,
+      "offset": 7489,
       "length": 20,
       "value": "\"CFBundleIdentifier\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7157,
+      "offset": 7551,
       "length": 21,
       "value": "\"CFBundleDisplayName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7226,
+      "offset": 7620,
       "length": 14,
       "value": "\"CFBundleName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7285,
+      "offset": 7679,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },

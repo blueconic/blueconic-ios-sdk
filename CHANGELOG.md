@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.3.0] 2024-06-14
+
+### Changed
+- Migrated SDK local file save location for enhanced security and added obfuscation to the file contents.
+
+### Added
+- Added support for timeline events in the SDK.
+
+### Fixed
+- Fixed minor issues with processing UI elements for Form Listeners.
+
 ## [3.2.0] 2024-03-12
 
 ### Added

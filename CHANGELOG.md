@@ -2,6 +2,24 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.0.0] 2024-12-15
+
+### Changed
+- Removed the requirement to add your hostname to the app plist files. The SDK requires now to be initialized with a `BlueConicConfiguration` object in code via an 'initialize' function.
+- Reworked the SDK to require an initialization step before any other SDK functions can be called.
+- The SDK BlueConicEventFactory class is not available anymore. Instead, the BlueConicEventManager class can be retrieved from the SDK instance via the `BlueConic.getInstance().getEventManager()` method.
+
+### Added
+- Added dedicated functions for creating events that are sent to the BlueConic server for the following events: 'PageView', 'Click', 'View', 'Conversion'. These functions can be called from the SDK instance.
+- Added dedicated functions for publishing events for the following events: 'ClickEvent', 'AdvancedEvent', 'FormSubmitEvent', 'UpdateContentEvent', 'UpdateValuesEvent'. These functions can be called from the BlueConicEventManager class.
+- Added Visit Listener plugin support.
+- Added Properties Based Dialogue plugin support.
+- Added ability to subscribe and unsubscribe to events via the BlueConicEventManager class. Currently the supported events are related to the Properties Based Dialogue plugin.
+- Added ability to clear profile id locally from cache.
+- Added optional callback information for a majority of the SDK functions.
+- Added additional ability to connect to the BlueConic simulator for testing purposes via the BlueConicConfiguration object when initializing the SDK.
+- Added ability to set a custom app scheme instead of the default application bundle id. This can be set via the BlueConicConfiguration object when initializing the SDK.
+
 ## [3.3.0] 2024-06-14
 
 ### Changed

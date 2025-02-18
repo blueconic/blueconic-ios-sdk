@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.0.1] 2025-02-17
+
+### Added
+- Additional callback error type for when the SDK does not have an internet connection.
+
+### Fixed
+- Fixed issue where the SDK would report that it is not enabled, but another error occurred, like no internet connection.
+
 ## [4.0.0] 2024-12-15
 
 ### Changed

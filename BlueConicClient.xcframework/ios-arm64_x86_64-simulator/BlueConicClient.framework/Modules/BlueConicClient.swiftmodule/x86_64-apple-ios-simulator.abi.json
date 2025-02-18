@@ -17733,6 +17733,47 @@
           },
           {
             "kind": "Var",
+            "name": "noNetworkConnectionError",
+            "printedName": "noNetworkConnectionError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlueConicClient.ErrorType.Type) -> BlueConicClient.ErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorType",
+                    "printedName": "BlueConicClient.ErrorType",
+                    "usr": "c:@M@BlueConicClient@E@ErrorType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlueConicClient.ErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorType",
+                        "printedName": "BlueConicClient.ErrorType",
+                        "usr": "c:@M@BlueConicClient@E@ErrorType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@BlueConicClient@E@ErrorType@ErrorTypeNoNetworkConnectionError",
+            "mangledName": "$s15BlueConicClient9ErrorTypeO019noNetworkConnectionD0yA2CmF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
             "name": "alreadyEnabled",
             "printedName": "alreadyEnabled",
             "children": [
@@ -17770,7 +17811,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 1
+            "fixedbinaryorder": 2
           },
           {
             "kind": "Var",
@@ -17811,7 +17852,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 2
+            "fixedbinaryorder": 3
           },
           {
             "kind": "Var",
@@ -17852,7 +17893,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 3
+            "fixedbinaryorder": 4
           },
           {
             "kind": "Var",
@@ -17893,7 +17934,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 4
+            "fixedbinaryorder": 5
           },
           {
             "kind": "Constructor",
@@ -24045,29 +24086,36 @@
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
-      "length": 14,
+      "length": 24,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
-      "offset": 501,
-      "length": 25,
+      "offset": 511,
+      "length": 14,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
-      "offset": 536,
-      "length": 17,
+      "offset": 535,
+      "length": 25,
       "value": "3"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
-      "offset": 563,
-      "length": 13,
+      "offset": 570,
+      "length": 17,
       "value": "4"
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 597,
+      "length": 13,
+      "value": "5"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicConnector.swift",
@@ -24193,7 +24241,7 @@
       "kind": "StringLiteral",
       "offset": 909,
       "length": 7,
-      "value": "\"4.0.0\""
+      "value": "\"4.0.1\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",

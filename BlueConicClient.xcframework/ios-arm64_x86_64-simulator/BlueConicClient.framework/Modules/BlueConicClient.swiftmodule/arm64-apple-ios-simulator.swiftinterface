@@ -659,6 +659,7 @@ extension BlueConicClient.JSON : Swift.Codable {
 }
 @objc public enum ErrorType : Swift.Int {
   case notEnabled
+  case noNetworkConnectionError
   case alreadyEnabled
   case interactionRetrievalError
   case invalidParameters

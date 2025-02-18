@@ -1131,10 +1131,11 @@ SWIFT_CLASS("_TtC15BlueConicClient10Connection")
 
 typedef SWIFT_ENUM(NSInteger, ErrorType, open) {
   ErrorTypeNotEnabled = 0,
-  ErrorTypeAlreadyEnabled = 1,
-  ErrorTypeInteractionRetrievalError = 2,
-  ErrorTypeInvalidParameters = 3,
-  ErrorTypeInternalError = 4,
+  ErrorTypeNoNetworkConnectionError = 1,
+  ErrorTypeAlreadyEnabled = 2,
+  ErrorTypeInteractionRetrievalError = 3,
+  ErrorTypeInvalidParameters = 4,
+  ErrorTypeInternalError = 5,
 };
 
 

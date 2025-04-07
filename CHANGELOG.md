@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.0.2] 2025-04-04
+
+### Fixed
+- Fixed issue where profile operations were not invoking the success callback if the operation was successful.
+- Fixed issue with Fullscreen Lightbox not loading correctly in some cases.
+
 ## [4.0.1] 2025-02-17
 
 ### Added

@@ -24241,7 +24241,7 @@
       "kind": "StringLiteral",
       "offset": 909,
       "length": 7,
-      "value": "\"4.0.1\""
+      "value": "\"4.0.2\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",

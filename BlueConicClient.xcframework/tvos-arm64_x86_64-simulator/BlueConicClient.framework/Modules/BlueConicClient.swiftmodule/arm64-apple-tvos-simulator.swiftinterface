@@ -1,0 +1,756 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-tvos18.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class BlueConicEventManager : ObjectiveC.NSObject {
+  @objc public class func getInstance() -> BlueConicClient.BlueConicEventManager
+  @objc public func publish(_ event: BlueConicClient.Event, callback: ((BlueConicClient.Callback) -> Swift.Void)?)
+  @objc public func subscribe(_ eventName: Swift.String, callbackObject: any BlueConicClient.EventHandler, onlyOnce: Swift.Bool = false, identifier: Swift.String = UUID().uuidString)
+  public func subscribe(_ eventName: BlueConicClient.BlueConicEventManager.EventName, callbackObject: any BlueConicClient.EventHandler, onlyOnce: Swift.Bool = false, identifier: Swift.String = UUID().uuidString)
+  public func unsubscribe(identifier: Swift.String)
+  @objc public func clearEvents()
+  @objc public func handleAllEvents()
+  @objc public func clearEventHandlers(_ key: Swift.String?)
+  @objc public func cleanup()
+  @objc public func publishAdvancedEvent(eventName: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func publishClickEvent(selector: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func publishFormSubmitEvent(selector: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func publishUpdateContentEvent(selector: Swift.String, content: Swift.String = "", callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func publishUpdateValuesEvent(selector: Swift.String, values: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public enum EventName : Swift.String {
+    case propertiesDialogue
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class EngagementScoreListener : BlueConicClient.BlueConicPlugin {
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BlueConicReachability {
+  @objc deinit
+}
+@objc public class PropertiesDialogueEvent : BlueConicClient.Event {
+  @objc override public var name: Swift.String {
+    @objc get
+  }
+  @objc public var variantId: Swift.String {
+    @objc get
+  }
+  @objc public var position: Swift.String {
+    @objc get
+  }
+  @objc public var data: Swift.String {
+    @objc get
+  }
+  @objc public init(variantId: Swift.String, position: Swift.String, data: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class EngagementService : BlueConicClient.EventSerivceBase {
+  @objc deinit
+  convenience public init(client: BlueConicClient.BlueConic, listenerId: Swift.String, propertyName: Swift.String, isInterest: Swift.Bool = false, allInterests: [Swift.String] = [], useHalfTime: Swift.Bool = false)
+  @objc override public func handleEvent(_ event: BlueConicClient.Event)
+  @objc public func applyRules(_ rules: [Any])
+  public func applyRules(_ rules: [BlueConicClient.JSON])
+  @objc public func isChanged() -> Swift.Bool
+  @objc public func save()
+  @objc public func touchAction(_ sender: UIKit.UIControl)
+}
+@_hasMissingDesignatedInitializers public class EventSerivceBase : BlueConicClient.EventHandler {
+  public var listenerId: Swift.String
+  @objc public func handleEvent(_ event: BlueConicClient.Event)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class EngagementRankingListener : BlueConicClient.BlueConicPlugin {
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class BlueConicConfiguration : ObjectiveC.NSObject {
+  public var hostName: Swift.String
+  public var isDebugMode: Swift.Bool
+  public var appID: Swift.String
+  public var shared: Swift.Bool
+  public var simulatorUsername: Swift.String
+  public var simulatorMobileSessionId: Swift.String
+  @_inheritsConvenienceInitializers @objc(BlueConicConfigurationBuilder) public class Builder : ObjectiveC.NSObject {
+    @objc override dynamic public init()
+    @objc public func setHostName(_ hostName: Swift.String) -> BlueConicClient.BlueConicConfiguration.Builder
+    @objc public func setOverrideAppId(_ appID: Swift.String) -> BlueConicClient.BlueConicConfiguration.Builder
+    @objc public func setDebugMode(_ isDebugMode: Swift.Bool) -> BlueConicClient.BlueConicConfiguration.Builder
+    @objc public func setShared(_ shared: Swift.Bool) -> BlueConicClient.BlueConicConfiguration.Builder
+    @objc public func setSimulatorData(_ simulatorUsername: Swift.String, simulatorMobileSessionId: Swift.String) -> BlueConicClient.BlueConicConfiguration.Builder
+    @objc public func build() -> BlueConicClient.BlueConicConfiguration
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class BlueConicSegment : ObjectiveC.NSObject {
+  @objc public func getId() -> Swift.String
+  @objc public func getName() -> Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class BlueConic : ObjectiveC.NSObject {
+  @objc public class func getInstance(_ context: UIKit.UIViewController?) -> BlueConicClient.BlueConic
+  @objc public class func getInstance() -> BlueConicClient.BlueConic
+  @objc public func initialize(_ configuration: BlueConicClient.BlueConicConfiguration, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func getConfiguration() -> BlueConicClient.BlueConicConfiguration
+  @objc public func setContext(_ context: UIKit.UIViewController?)
+  @objc public func getProfile() -> BlueConicClient.Profile
+  @objc public func createProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func deleteProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func updateProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func getViewController() -> UIKit.UIViewController?
+  @objc public func getView(_ selector: Swift.String) -> UIKit.UIView?
+  @objc public func getScreenName() -> Swift.String
+  @objc public func setMobileAdId(_ mobileAdId: Swift.String?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func setEnabled(_ isEnabled: Swift.Bool)
+  @objc public func isEnabled() -> Swift.Bool
+  @objc public func setLocale(_ locale: Swift.String)
+  @objc public func setURL(_ url: Foundation.URL)
+  @objc public func getEventManager() -> BlueConicClient.BlueConicEventManager
+  @objc public func createPageViewEvent(screenName: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func createViewEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func createConversionEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func createClickEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func createEvent(_ eventType: Swift.String, data: [Swift.String : Any]?)
+  @objc public func createEvent(_ eventType: Swift.String, data: [Swift.String : Any]?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?)
+  @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func createTimelineEvent(_ eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func createTimelineEventById(_ eventId: Swift.String, eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass)
+  @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass, className: Swift.String)
+  @objc public func getSegments() -> [BlueConicClient.BlueConicSegment]
+  @objc public func hasSegment(_ segmentId: Swift.String) -> Swift.Bool
+  @objc public class func setPlatformInformation(platformName: Swift.String, platformVersion: Swift.String)
+  @objc deinit
+}
+@objc public class UpdateContentEvent : BlueConicClient.Event {
+  @objc public var content: [Swift.String] {
+    @objc get
+  }
+  @objc public var selector: Swift.String {
+    @objc get
+  }
+  @objc public init(content: Swift.String)
+  @objc public init(selector: Swift.String, content: Swift.String)
+  @objc override public func message() -> Swift.String
+  @objc deinit
+}
+@objc public protocol EventHandler {
+  @objc func handleEvent(_ event: BlueConicClient.Event)
+}
+@objc public class ClickEvent : BlueConicClient.Event {
+  @objc public var selector: Swift.String {
+    @objc get
+  }
+  @objc public var context: [Swift.String]? {
+    @objc get
+  }
+  @objc public init(selector: Swift.String)
+  @objc public init(selector: Swift.String, context: [Swift.String])
+  @objc override public func message() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PreferredHourListener : BlueConicClient.BlueConicPlugin {
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RuleService : BlueConicClient.EventSerivceBase {
+  public struct ProfileChange {
+  }
+  @objc convenience public init(listenerId: Swift.String)
+  @objc public func applyRules(_ rules: [Any])
+  public func applyRules(_ rules: [BlueConicClient.JSON])
+  @objc public func isChanged() -> Swift.Bool
+  @objc public func save()
+  @objc override public func handleEvent(_ event: BlueConicClient.Event)
+  @objc public func touchAction(_ sender: UIKit.UIControl)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VisitListener : BlueConicClient.BlueConicPlugin {
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class Connection : ObjectiveC.NSObject {
+  @objc public func getId() -> Swift.String
+  @objc public func getParameters() -> [Swift.String : [Swift.String]]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class Event : ObjectiveC.NSObject {
+  @objc public var name: Swift.String {
+    @objc get
+  }
+  @objc public var location: Swift.String? {
+    @objc get
+    @objc set(newLocation)
+  }
+  @objc public var handledBy: [Swift.String] {
+    @objc get
+  }
+  @objc public func addHandledBy(_ handledBy: Swift.String)
+  @objc public func message() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum EventType : Swift.String {
+  case CLICK
+  case VIEW
+  case CONVERSION
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum OperationType : Swift.String {
+  case ADD
+  case SET
+  case INCREMENT
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public protocol BlueConicPlugin {
+  @objc init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc func onLoad()
+  @objc optional func onDestroy()
+}
+@objc public class UpdateValuesEvent : BlueConicClient.Event {
+  @objc public var values: [Swift.String] {
+    @objc get
+  }
+  @objc public var selector: Swift.String {
+    @objc get
+  }
+  @objc public init(values: [Swift.String])
+  @objc public init(selector: Swift.String, values: [Swift.String])
+  @objc deinit
+}
+public enum SwiftyJSONError : Swift.Int, Swift.Error {
+  case unsupportedType
+  case indexOutOfBounds
+  case elementTooDeep
+  case wrongType
+  case notExist
+  case invalidJSON
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension BlueConicClient.SwiftyJSONError : Foundation.CustomNSError {
+  public static var errorDomain: Swift.String {
+    get
+  }
+  public var errorCode: Swift.Int {
+    get
+  }
+  public var errorUserInfo: [Swift.String : Any] {
+    get
+  }
+}
+public enum Type : Swift.Int {
+  case number
+  case string
+  case bool
+  case array
+  case dictionary
+  case null
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct JSON {
+  public init(data: Foundation.Data, options opt: Foundation.JSONSerialization.ReadingOptions = []) throws
+  public init(_ object: Any)
+  public init(parseJSON jsonString: Swift.String)
+  public mutating func merge(with other: BlueConicClient.JSON) throws
+  public func merged(with other: BlueConicClient.JSON) throws -> BlueConicClient.JSON
+  public var type: BlueConicClient.`Type` {
+    get
+  }
+  public var error: BlueConicClient.SwiftyJSONError? {
+    get
+  }
+  public var object: Any {
+    get
+    set
+  }
+  @available(*, unavailable, renamed: "null")
+  public static var nullJSON: BlueConicClient.JSON {
+    get
+  }
+  public static var null: BlueConicClient.JSON {
+    get
+  }
+}
+public enum Index<T> : Swift.Comparable {
+  case array(Swift.Int)
+  case dictionary(Swift.DictionaryIndex<Swift.String, T>)
+  case null
+  public static func == (lhs: BlueConicClient.Index<T>, rhs: BlueConicClient.Index<T>) -> Swift.Bool
+  public static func < (lhs: BlueConicClient.Index<T>, rhs: BlueConicClient.Index<T>) -> Swift.Bool
+}
+public typealias JSONIndex = BlueConicClient.Index<BlueConicClient.JSON>
+public typealias JSONRawIndex = BlueConicClient.Index<Any>
+extension BlueConicClient.JSON : Swift.Collection {
+  public typealias Index = BlueConicClient.JSONRawIndex
+  public var startIndex: BlueConicClient.JSON.Index {
+    get
+  }
+  public var endIndex: BlueConicClient.JSON.Index {
+    get
+  }
+  public func index(after i: BlueConicClient.JSON.Index) -> BlueConicClient.JSON.Index
+  public subscript(position: BlueConicClient.JSON.Index) -> (Swift.String, BlueConicClient.JSON) {
+    get
+  }
+  public typealias Element = (Swift.String, BlueConicClient.JSON)
+  public typealias Indices = Swift.DefaultIndices<BlueConicClient.JSON>
+  public typealias Iterator = Swift.IndexingIterator<BlueConicClient.JSON>
+  public typealias SubSequence = Swift.Slice<BlueConicClient.JSON>
+}
+public enum JSONKey {
+  case index(Swift.Int)
+  case key(Swift.String)
+}
+public protocol JSONSubscriptType {
+  var jsonKey: BlueConicClient.JSONKey { get }
+}
+extension Swift.Int : BlueConicClient.JSONSubscriptType {
+  public var jsonKey: BlueConicClient.JSONKey {
+    get
+  }
+}
+extension Swift.String : BlueConicClient.JSONSubscriptType {
+  public var jsonKey: BlueConicClient.JSONKey {
+    get
+  }
+}
+extension BlueConicClient.JSON {
+  public subscript(path: [any BlueConicClient.JSONSubscriptType]) -> BlueConicClient.JSON {
+    get
+    set
+  }
+  public subscript(path: any BlueConicClient.JSONSubscriptType...) -> BlueConicClient.JSON {
+    get
+    set
+  }
+}
+extension BlueConicClient.JSON : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public init(extendedGraphemeClusterLiteral value: Swift.StringLiteralType)
+  public init(unicodeScalarLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
+}
+extension BlueConicClient.JSON : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.IntegerLiteralType)
+  public typealias IntegerLiteralType = Swift.IntegerLiteralType
+}
+extension BlueConicClient.JSON : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.BooleanLiteralType)
+  public typealias BooleanLiteralType = Swift.BooleanLiteralType
+}
+extension BlueConicClient.JSON : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.FloatLiteralType)
+  public typealias FloatLiteralType = Swift.FloatLiteralType
+}
+extension BlueConicClient.JSON : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, Any)...)
+  public typealias Key = Swift.String
+  public typealias Value = Any
+}
+extension BlueConicClient.JSON : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: Any...)
+  public typealias ArrayLiteralElement = Any
+}
+extension BlueConicClient.JSON : Swift.RawRepresentable {
+  public init?(rawValue: Any)
+  public var rawValue: Any {
+    get
+  }
+  public func rawData(options opt: Foundation.JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Foundation.Data
+  public func rawString(_ encoding: Swift.String.Encoding = .utf8, options opt: Foundation.JSONSerialization.WritingOptions = .prettyPrinted) -> Swift.String?
+  public func rawString(_ options: [BlueConicClient.writingOptionsKeys : Any]) -> Swift.String?
+  public typealias RawValue = Any
+}
+extension BlueConicClient.JSON : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension BlueConicClient.JSON {
+  public var array: [BlueConicClient.JSON]? {
+    get
+  }
+  public var arrayValue: [BlueConicClient.JSON] {
+    get
+  }
+  public var arrayObject: [Any]? {
+    get
+    set
+  }
+}
+extension BlueConicClient.JSON {
+  public var dictionary: [Swift.String : BlueConicClient.JSON]? {
+    get
+  }
+  public var dictionaryValue: [Swift.String : BlueConicClient.JSON] {
+    get
+  }
+  public var dictionaryObject: [Swift.String : Any]? {
+    get
+    set
+  }
+}
+extension BlueConicClient.JSON {
+  public var bool: Swift.Bool? {
+    get
+    set
+  }
+  public var boolValue: Swift.Bool {
+    get
+    set
+  }
+}
+extension BlueConicClient.JSON {
+  public var string: Swift.String? {
+    get
+    set
+  }
+  public var stringValue: Swift.String {
+    get
+    set
+  }
+}
+extension BlueConicClient.JSON {
+  public var number: Foundation.NSNumber? {
+    get
+    set
+  }
+  public var numberValue: Foundation.NSNumber {
+    get
+    set
+  }
+}
+extension BlueConicClient.JSON {
+  public var null: Foundation.NSNull? {
+    get
+    set
+  }
+  public func exists() -> Swift.Bool
+}
+extension BlueConicClient.JSON {
+  public var url: Foundation.URL? {
+    get
+    set
+  }
+}
+extension BlueConicClient.JSON {
+  public var double: Swift.Double? {
+    get
+    set
+  }
+  public var doubleValue: Swift.Double {
+    get
+    set
+  }
+  public var float: Swift.Float? {
+    get
+    set
+  }
+  public var floatValue: Swift.Float {
+    get
+    set
+  }
+  public var int: Swift.Int? {
+    get
+    set
+  }
+  public var intValue: Swift.Int {
+    get
+    set
+  }
+  public var uInt: Swift.UInt? {
+    get
+    set
+  }
+  public var uIntValue: Swift.UInt {
+    get
+    set
+  }
+  public var int8: Swift.Int8? {
+    get
+    set
+  }
+  public var int8Value: Swift.Int8 {
+    get
+    set
+  }
+  public var uInt8: Swift.UInt8? {
+    get
+    set
+  }
+  public var uInt8Value: Swift.UInt8 {
+    get
+    set
+  }
+  public var int16: Swift.Int16? {
+    get
+    set
+  }
+  public var int16Value: Swift.Int16 {
+    get
+    set
+  }
+  public var uInt16: Swift.UInt16? {
+    get
+    set
+  }
+  public var uInt16Value: Swift.UInt16 {
+    get
+    set
+  }
+  public var int32: Swift.Int32? {
+    get
+    set
+  }
+  public var int32Value: Swift.Int32 {
+    get
+    set
+  }
+  public var uInt32: Swift.UInt32? {
+    get
+    set
+  }
+  public var uInt32Value: Swift.UInt32 {
+    get
+    set
+  }
+  public var int64: Swift.Int64? {
+    get
+    set
+  }
+  public var int64Value: Swift.Int64 {
+    get
+    set
+  }
+  public var uInt64: Swift.UInt64? {
+    get
+    set
+  }
+  public var uInt64Value: Swift.UInt64 {
+    get
+    set
+  }
+}
+extension BlueConicClient.JSON : Swift.Comparable {
+}
+public func == (lhs: BlueConicClient.JSON, rhs: BlueConicClient.JSON) -> Swift.Bool
+public func <= (lhs: BlueConicClient.JSON, rhs: BlueConicClient.JSON) -> Swift.Bool
+public func >= (lhs: BlueConicClient.JSON, rhs: BlueConicClient.JSON) -> Swift.Bool
+public func > (lhs: BlueConicClient.JSON, rhs: BlueConicClient.JSON) -> Swift.Bool
+public func < (lhs: BlueConicClient.JSON, rhs: BlueConicClient.JSON) -> Swift.Bool
+public enum writingOptionsKeys {
+  case jsonSerialization
+  case castNilToNSNull
+  case maxObjextDepth
+  case encoding
+  public static func == (a: BlueConicClient.writingOptionsKeys, b: BlueConicClient.writingOptionsKeys) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension BlueConicClient.JSON : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class Callback : ObjectiveC.NSObject {
+  @objc final public let success: Swift.Bool
+  @objc final public let error: BlueConicClient.BCError?
+  @objc deinit
+}
+@objc public enum ErrorType : Swift.Int {
+  case notEnabled
+  case noNetworkConnectionError
+  case alreadyEnabled
+  case interactionRetrievalError
+  case invalidParameters
+  case internalError
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class BCError : ObjectiveC.NSObject, Swift.Error {
+  @objc final public let type: BlueConicClient.ErrorType
+  @objc final public let nsError: Foundation.NSError
+  @objc final public let message: Swift.String?
+  @objc public init(type: BlueConicClient.ErrorType, nsError: Foundation.NSError, message: Swift.String? = nil)
+  @objc public static func withType(_ type: BlueConicClient.ErrorType, message: Swift.String? = nil) -> BlueConicClient.BCError
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class Profile : ObjectiveC.NSObject {
+  public func getId() -> Swift.String?
+  public func getDomainGroup() -> Swift.String?
+  @objc public func getPrivacyLegislation() -> Swift.String?
+  @objc public func getConsentedObjectives() -> [Swift.String]?
+  @objc public func getRefusedObjectives() -> [Swift.String]?
+  @objc public func setPrivacyLegislation(_ legislation: Swift.String)
+  @objc public func addConsentedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func addRefusedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func setConsentedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func setRefusedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func getAllProperties() -> [Swift.String : [Swift.String]]
+  public func getValue(_ property: Swift.String) -> Swift.String
+  public func getValues(_ property: Swift.String) -> [Swift.String]?
+  public func addValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func addValues(_ property: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func setValue(_ name: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func setValues(_ name: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func incrementValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class InteractionContext : ObjectiveC.NSObject {
+  @objc public func getInteractionId() -> Swift.String?
+  @objc public func getInteractionName() -> Swift.String?
+  @objc public func getInteractionTypeId() -> Swift.String?
+  @objc public func getPluginType() -> Swift.String?
+  @objc public func getDialogueId() -> Swift.String?
+  @objc public func getDialogueName() -> Swift.String?
+  @objc public func getParameters() -> [Swift.String : [Swift.String]]
+  @objc public func getConnection(_ id: Swift.String) -> BlueConicClient.Connection?
+  @objc public func getView() -> UIKit.UIView?
+  @objc public func getPositionIdentifier() -> Swift.String?
+  @objc public func getPositionName() -> Swift.String?
+  @objc public func getValueFromParameters(key: Swift.String) -> Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FormListener : BlueConicClient.BlueConicPlugin {
+  @objc convenience required public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  public func migrate() -> [Any]?
+  public func migrateToV2(rules: [Any]) -> [Any]?
+  @objc public func onDestroy()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BehaviorListener : BlueConicClient.BlueConicPlugin {
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
+  @objc deinit
+}
+extension Swift.KeyedEncodingContainer {
+  public mutating func encode(_ value: [Swift.String : Any], forKey key: Swift.KeyedEncodingContainer<K>.Key) throws
+  public mutating func encode(_ value: [Any], forKey key: Swift.KeyedEncodingContainer<K>.Key) throws
+}
+extension Swift.KeyedDecodingContainer {
+  public func decode(_ type: [Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Any]
+  public func decode(_ type: [Swift.String : Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Swift.String : Any]
+}
+@_hasMissingDesignatedInitializers public class PropertiesBasedDialogue : BlueConicClient.BlueConicPlugin {
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
+  @objc deinit
+}
+@objc public class AdvancedEvent : BlueConicClient.Event {
+  @objc public var eventName: Swift.String
+  @objc public var context: [Swift.String]? {
+    @objc get
+  }
+  @objc public init(eventName: Swift.String)
+  @objc public init(eventName: Swift.String, context: [Swift.String])
+  @objc override public func message() -> Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class FieldChangeEvent : BlueConicClient.ClickEvent {
+  @objc override public init(selector: Swift.String)
+  @objc override public init(selector: Swift.String, context: [Swift.String])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ListenerUtil {
+  public class func contentContainsWord(_ rule: BlueConicClient.JSON, content: [Swift.String], interests: [Swift.String]) -> Swift.Bool
+  public class func getWords(_ rule: BlueConicClient.JSON) -> [Swift.String]
+  public class func getWords(_ words: [Swift.String]?) -> [Swift.String]
+  public class func getContent(_ selector: Swift.String, context: [Swift.String]?) -> [Swift.String]
+  public class func applyToSubViews(_ element: UIKit.UIView?, apply: (UIKit.UIView) -> Swift.String?) -> Swift.Set<Swift.String>
+  public class func getSelector(_ contentArea: BlueConicClient.JSON?) -> Swift.String?
+  public class func JSONStringify(_ value: Any, prettyPrinted: Swift.Bool = false) -> Swift.String
+  public class func getProfilePropertyFromParameters(_ parameters: [Swift.String : [Swift.String]]) -> Swift.String?
+  public class func getDictionaryFromParameters(_ context: BlueConicClient.InteractionContext?, key: Swift.String) -> [Swift.String : [Any]]?
+  public class func getArrayFromParameters(_ context: BlueConicClient.InteractionContext?, key: Swift.String) -> [[Swift.String : Any]]?
+  public class func getValueFromParameters(_ context: BlueConicClient.InteractionContext?, key: Swift.String) -> Swift.String
+  public class func getValueFromDictionary(_ dictionary: [Swift.String : [Swift.String]], key: Swift.String) -> Swift.String
+  public class func stringToJson(_ json: Swift.String) -> Any?
+  public class func getCurrentTime() -> Swift.String
+  public class func getCurrentDate() -> Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class FormSubmitEvent : BlueConicClient.ClickEvent {
+  @objc override public init(selector: Swift.String)
+  @objc override public init(selector: Swift.String, context: [Swift.String])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GlobalListener : BlueConicClient.BlueConicPlugin {
+  public var infoDictionary: [Swift.String : Any?] {
+    get
+    set
+  }
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc deinit
+}
+extension BlueConicClient.BlueConicEventManager.EventName : Swift.Equatable {}
+extension BlueConicClient.BlueConicEventManager.EventName : Swift.Hashable {}
+extension BlueConicClient.BlueConicEventManager.EventName : Swift.RawRepresentable {}
+extension BlueConicClient.EventType : Swift.Equatable {}
+extension BlueConicClient.EventType : Swift.Hashable {}
+extension BlueConicClient.EventType : Swift.RawRepresentable {}
+extension BlueConicClient.OperationType : Swift.Equatable {}
+extension BlueConicClient.OperationType : Swift.Hashable {}
+extension BlueConicClient.OperationType : Swift.RawRepresentable {}
+extension BlueConicClient.SwiftyJSONError : Swift.Equatable {}
+extension BlueConicClient.SwiftyJSONError : Swift.Hashable {}
+extension BlueConicClient.SwiftyJSONError : Swift.RawRepresentable {}
+extension BlueConicClient.`Type` : Swift.Equatable {}
+extension BlueConicClient.`Type` : Swift.Hashable {}
+extension BlueConicClient.`Type` : Swift.RawRepresentable {}
+extension BlueConicClient.writingOptionsKeys : Swift.Equatable {}
+extension BlueConicClient.writingOptionsKeys : Swift.Hashable {}
+extension BlueConicClient.ErrorType : Swift.Equatable {}
+extension BlueConicClient.ErrorType : Swift.Hashable {}
+extension BlueConicClient.ErrorType : Swift.RawRepresentable {}

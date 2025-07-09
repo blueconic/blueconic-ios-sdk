@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import Foundation
 import Swift
 import SystemConfiguration
@@ -137,33 +137,18 @@ import _SwiftConcurrencyShims
   @objc public func initialize(_ configuration: BlueConicClient.BlueConicConfiguration, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func getConfiguration() -> BlueConicClient.BlueConicConfiguration
   @objc public func setContext(_ context: UIKit.UIViewController?)
-  @objc public func getProfileValue(_ property: Swift.String) -> Swift.String
-  @objc public func getProfileValues(_ property: Swift.String) -> [Swift.String]?
-  @objc public func getAllProfileProperties() -> [Swift.String : [Swift.String]]
+  @objc public func getProfile() -> BlueConicClient.Profile
+  @objc public func createProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func deleteProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func updateProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func getViewController() -> UIKit.UIViewController?
   @objc public func getView(_ selector: Swift.String) -> UIKit.UIView?
   @objc public func getScreenName() -> Swift.String
-  @objc public func addProfileValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  @objc public func addProfileValues(_ property: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  @objc public func setProfileValue(_ name: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  @objc public func setProfileValues(_ name: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  @objc public func incrementProfileValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func setMobileAdId(_ mobileAdId: Swift.String?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func setEnabled(_ isEnabled: Swift.Bool)
   @objc public func isEnabled() -> Swift.Bool
-  @objc public func getProfileId() -> Swift.String?
-  @objc public func clearProfileId(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func setLocale(_ locale: Swift.String)
   @objc public func setURL(_ url: Foundation.URL)
-  @objc public func getPrivacyLegislation() -> Swift.String?
-  @objc public func getConsentedObjectives() -> [Swift.String]?
-  @objc public func getRefusedObjectives() -> [Swift.String]?
-  @objc public func setPrivacyLegislation(_ legislation: Swift.String)
-  @objc public func addConsentedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  @objc public func addRefusedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  @objc public func setConsentedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  @objc public func setRefusedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  @objc public func updateProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func getEventManager() -> BlueConicClient.BlueConicEventManager
   @objc public func createPageViewEvent(screenName: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func createViewEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
@@ -676,6 +661,27 @@ extension BlueConicClient.JSON : Swift.Codable {
   @objc final public let message: Swift.String?
   @objc public init(type: BlueConicClient.ErrorType, nsError: Foundation.NSError, message: Swift.String? = nil)
   @objc public static func withType(_ type: BlueConicClient.ErrorType, message: Swift.String? = nil) -> BlueConicClient.BCError
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class Profile : ObjectiveC.NSObject {
+  public func getId() -> Swift.String?
+  public func getDomainGroup() -> Swift.String?
+  @objc public func getPrivacyLegislation() -> Swift.String?
+  @objc public func getConsentedObjectives() -> [Swift.String]?
+  @objc public func getRefusedObjectives() -> [Swift.String]?
+  @objc public func setPrivacyLegislation(_ legislation: Swift.String)
+  @objc public func addConsentedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func addRefusedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func setConsentedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func setRefusedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func getAllProperties() -> [Swift.String : [Swift.String]]
+  public func getValue(_ property: Swift.String) -> Swift.String
+  public func getValues(_ property: Swift.String) -> [Swift.String]?
+  public func addValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func addValues(_ property: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func setValue(_ name: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func setValues(_ name: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func incrementValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class InteractionContext : ObjectiveC.NSObject {

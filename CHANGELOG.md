@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.0.0] 2025-07-10
+
+### Added
+- Added support for Apple TV devices.
+- Added ability to delete a profile ID server-side via the SDK. This can be done by calling the `deleteProfile` method on the `BlueConicClient` instance. Additionally, the `clearProfileId` has been renamed to `createProfile` having the same functionality as before.
+- Introduced a new 'Profile' object and migrated all the profile related methods to this new object. The `BlueConicClient` now has a `getProfile()` function that returns the `Profile` object, which contains methods for managing profile data.
+
+### Fixed
+- Fixed issue with certain callbacks being invoked multiple times.
+- Fixed issue with the SDK not sending the 'time' parameter in the correct format to the server.
+
 ## [4.0.2] 2025-04-04
 
 ### Fixed

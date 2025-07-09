@@ -2078,10 +2078,7 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "BlueConicClient",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "BlueConicClient"
       },
       {
         "kind": "Import",
@@ -4402,25 +4399,19 @@
           },
           {
             "kind": "Function",
-            "name": "getProfileValue",
-            "printedName": "getProfileValue(_:)",
+            "name": "getProfile",
+            "printedName": "getProfile()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Profile",
+                "printedName": "BlueConicClient.Profile",
+                "usr": "c:@M@BlueConicClient@objc(cs)Profile"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getProfileValue:",
-            "mangledName": "$s15BlueConicClient0aB0C15getProfileValueyS2SF",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getProfile",
+            "mangledName": "$s15BlueConicClient0aB0C10getProfileAA0E0CyF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -4431,41 +4422,45 @@
           },
           {
             "kind": "Function",
-            "name": "getProfileValues",
-            "printedName": "getProfileValues(_:)",
+            "name": "createProfile",
+            "printedName": "createProfile(_:)",
             "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String]?",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
                       }
-                    ],
-                    "usr": "s:Sa"
+                    ]
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getProfileValues:",
-            "mangledName": "$s15BlueConicClient0aB0C16getProfileValuesySaySSGSgSSF",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)createProfile:",
+            "mangledName": "$s15BlueConicClient0aB0C13createProfileyyyAA8CallbackCcSgF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -4476,41 +4471,94 @@
           },
           {
             "kind": "Function",
-            "name": "getAllProfileProperties",
-            "printedName": "getAllProfileProperties()",
+            "name": "deleteProfile",
+            "printedName": "deleteProfile(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : [Swift.String]]",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
                       }
-                    ],
-                    "usr": "s:Sa"
+                    ]
                   }
                 ],
-                "usr": "s:SD"
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getAllProfileProperties",
-            "mangledName": "$s15BlueConicClient0aB0C23getAllProfilePropertiesSDySSSaySSGGyF",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)deleteProfile:",
+            "mangledName": "$s15BlueConicClient0aB0C13deleteProfileyyyAA8CallbackCcSgF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateProfile",
+            "printedName": "updateProfile(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)updateProfile:",
+            "mangledName": "$s15BlueConicClient0aB0C13updateProfileyyyAA8CallbackCcSgF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -4602,327 +4650,6 @@
             "declKind": "Func",
             "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getScreenName",
             "mangledName": "$s15BlueConicClient0aB0C13getScreenNameSSyF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addProfileValue",
-            "printedName": "addProfileValue(_:value:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)addProfileValue:value:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C15addProfileValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addProfileValues",
-            "printedName": "addProfileValues(_:values:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)addProfileValues:values:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C16addProfileValues_6values8callbackySS_SaySSGyAA8CallbackCcSgtF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setProfileValue",
-            "printedName": "setProfileValue(_:value:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)setProfileValue:value:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C15setProfileValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setProfileValues",
-            "printedName": "setProfileValues(_:values:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)setProfileValues:values:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C16setProfileValues_6values8callbackySS_SaySSGyAA8CallbackCcSgtF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "incrementProfileValue",
-            "printedName": "incrementProfileValue(_:value:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)incrementProfileValue:value:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C21incrementProfileValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -5047,86 +4774,6 @@
           },
           {
             "kind": "Function",
-            "name": "getProfileId",
-            "printedName": "getProfileId()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getProfileId",
-            "mangledName": "$s15BlueConicClient0aB0C12getProfileIdSSSgyF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearProfileId",
-            "printedName": "clearProfileId(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)clearProfileId:",
-            "mangledName": "$s15BlueConicClient0aB0C14clearProfileIdyyyAA8CallbackCcSgF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "setLocale",
             "printedName": "setLocale(_:)",
             "children": [
@@ -5173,428 +4820,6 @@
             "declKind": "Func",
             "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)setURL:",
             "mangledName": "$s15BlueConicClient0aB0C6setURLyy10Foundation0E0VF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getPrivacyLegislation",
-            "printedName": "getPrivacyLegislation()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getPrivacyLegislation",
-            "mangledName": "$s15BlueConicClient0aB0C21getPrivacyLegislationSSSgyF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getConsentedObjectives",
-            "printedName": "getConsentedObjectives()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getConsentedObjectives",
-            "mangledName": "$s15BlueConicClient0aB0C22getConsentedObjectivesSaySSGSgyF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getRefusedObjectives",
-            "printedName": "getRefusedObjectives()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)getRefusedObjectives",
-            "mangledName": "$s15BlueConicClient0aB0C20getRefusedObjectivesSaySSGSgyF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setPrivacyLegislation",
-            "printedName": "setPrivacyLegislation(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)setPrivacyLegislation:",
-            "mangledName": "$s15BlueConicClient0aB0C21setPrivacyLegislationyySSF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addConsentedObjective",
-            "printedName": "addConsentedObjective(_:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)addConsentedObjective:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C21addConsentedObjective_8callbackySS_yAA8CallbackCcSgtF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addRefusedObjective",
-            "printedName": "addRefusedObjective(_:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)addRefusedObjective:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C19addRefusedObjective_8callbackySS_yAA8CallbackCcSgtF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setConsentedObjectives",
-            "printedName": "setConsentedObjectives(_:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)setConsentedObjectives:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C22setConsentedObjectives_8callbackySaySSG_yAA8CallbackCcSgtF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setRefusedObjectives",
-            "printedName": "setRefusedObjectives(_:callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)setRefusedObjectives:callback:",
-            "mangledName": "$s15BlueConicClient0aB0C20setRefusedObjectives_8callbackySaySSG_yAA8CallbackCcSgtF",
-            "moduleName": "BlueConicClient",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "updateProfile",
-            "printedName": "updateProfile(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BlueConicClient.Callback) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BlueConicClient.Callback) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Callback",
-                        "printedName": "BlueConicClient.Callback",
-                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)updateProfile:",
-            "mangledName": "$s15BlueConicClient0aB0C13updateProfileyyyAA8CallbackCcSgF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -7922,10 +7147,7 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "BlueConicClient",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "BlueConicClient"
       },
       {
         "kind": "Import",
@@ -18477,6 +17699,967 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "Profile",
+        "printedName": "Profile",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getId",
+            "printedName": "getId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC5getIdSSSgyF",
+            "mangledName": "$s15BlueConicClient7ProfileC5getIdSSSgyF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDomainGroup",
+            "printedName": "getDomainGroup()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC14getDomainGroupSSSgyF",
+            "mangledName": "$s15BlueConicClient7ProfileC14getDomainGroupSSSgyF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPrivacyLegislation",
+            "printedName": "getPrivacyLegislation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)Profile(im)getPrivacyLegislation",
+            "mangledName": "$s15BlueConicClient7ProfileC21getPrivacyLegislationSSSgyF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getConsentedObjectives",
+            "printedName": "getConsentedObjectives()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)Profile(im)getConsentedObjectives",
+            "mangledName": "$s15BlueConicClient7ProfileC22getConsentedObjectivesSaySSGSgyF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRefusedObjectives",
+            "printedName": "getRefusedObjectives()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)Profile(im)getRefusedObjectives",
+            "mangledName": "$s15BlueConicClient7ProfileC20getRefusedObjectivesSaySSGSgyF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPrivacyLegislation",
+            "printedName": "setPrivacyLegislation(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)Profile(im)setPrivacyLegislation:",
+            "mangledName": "$s15BlueConicClient7ProfileC21setPrivacyLegislationyySSF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addConsentedObjective",
+            "printedName": "addConsentedObjective(_:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)Profile(im)addConsentedObjective:callback:",
+            "mangledName": "$s15BlueConicClient7ProfileC21addConsentedObjective_8callbackySS_yAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addRefusedObjective",
+            "printedName": "addRefusedObjective(_:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)Profile(im)addRefusedObjective:callback:",
+            "mangledName": "$s15BlueConicClient7ProfileC19addRefusedObjective_8callbackySS_yAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setConsentedObjectives",
+            "printedName": "setConsentedObjectives(_:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)Profile(im)setConsentedObjectives:callback:",
+            "mangledName": "$s15BlueConicClient7ProfileC22setConsentedObjectives_8callbackySaySSG_yAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setRefusedObjectives",
+            "printedName": "setRefusedObjectives(_:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)Profile(im)setRefusedObjectives:callback:",
+            "mangledName": "$s15BlueConicClient7ProfileC20setRefusedObjectives_8callbackySaySSG_yAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAllProperties",
+            "printedName": "getAllProperties()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : [Swift.String]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC16getAllPropertiesSDySSSaySSGGyF",
+            "mangledName": "$s15BlueConicClient7ProfileC16getAllPropertiesSDySSSaySSGGyF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getValue",
+            "printedName": "getValue(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC8getValueyS2SF",
+            "mangledName": "$s15BlueConicClient7ProfileC8getValueyS2SF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getValues",
+            "printedName": "getValues(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC9getValuesySaySSGSgSSF",
+            "mangledName": "$s15BlueConicClient7ProfileC9getValuesySaySSGSgSSF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addValue",
+            "printedName": "addValue(_:value:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC8addValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
+            "mangledName": "$s15BlueConicClient7ProfileC8addValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addValues",
+            "printedName": "addValues(_:values:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC9addValues_6values8callbackySS_SaySSGyAA8CallbackCcSgtF",
+            "mangledName": "$s15BlueConicClient7ProfileC9addValues_6values8callbackySS_SaySSGyAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setValue",
+            "printedName": "setValue(_:value:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC8setValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
+            "mangledName": "$s15BlueConicClient7ProfileC8setValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setValues",
+            "printedName": "setValues(_:values:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC9setValues_6values8callbackySS_SaySSGyAA8CallbackCcSgtF",
+            "mangledName": "$s15BlueConicClient7ProfileC9setValues_6values8callbackySS_SaySSGyAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "incrementValue",
+            "printedName": "incrementValue(_:value:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient7ProfileC14incrementValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
+            "mangledName": "$s15BlueConicClient7ProfileC14incrementValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@BlueConicClient@objc(cs)Profile",
+        "mangledName": "$s15BlueConicClient7ProfileC",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -22909,42 +23092,42 @@
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "IntegerLiteral",
-      "offset": 2898,
+      "offset": 2909,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "BooleanLiteral",
-      "offset": 3233,
+      "offset": 3244,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "BooleanLiteral",
-      "offset": 3281,
+      "offset": 3292,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "BooleanLiteral",
-      "offset": 3319,
+      "offset": 3330,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "IntegerLiteral",
-      "offset": 3392,
+      "offset": 3403,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "FloatLiteral",
-      "offset": 3402,
+      "offset": 3413,
       "length": 3,
       "value": "0.5"
     },
@@ -23021,28 +23204,28 @@
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "Dictionary",
-      "offset": 24776,
+      "offset": 11590,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "Dictionary",
-      "offset": 25355,
+      "offset": 12169,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "Dictionary",
-      "offset": 25955,
+      "offset": 12769,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "Dictionary",
-      "offset": 26560,
+      "offset": 13374,
       "length": 3,
       "value": "[]"
     },
@@ -23056,49 +23239,49 @@
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 841,
+      "offset": 803,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 1065,
+      "offset": 1034,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 1431,
+      "offset": 1400,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "FloatLiteral",
-      "offset": 1666,
+      "offset": 1636,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "FloatLiteral",
-      "offset": 1713,
+      "offset": 1683,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 1756,
+      "offset": 1726,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "StringLiteral",
-      "offset": 1911,
+      "offset": 1881,
       "length": 2,
       "value": "\"\""
     },
@@ -23308,63 +23491,63 @@
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 10992,
+      "offset": 11088,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 11024,
+      "offset": 11120,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 11054,
+      "offset": 11150,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 11083,
+      "offset": 11179,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "FloatLiteral",
-      "offset": 11118,
+      "offset": 11214,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 11147,
+      "offset": 11243,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 11181,
+      "offset": 11277,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/FormListeningService.swift",
       "kind": "StringLiteral",
-      "offset": 274,
+      "offset": 285,
       "length": 16,
       "value": "\"BC_FORMSERVICE\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/FormListeningService.swift",
       "kind": "Array",
-      "offset": 342,
+      "offset": 353,
       "length": 2,
       "value": "[]"
     },
@@ -24241,7 +24424,7 @@
       "kind": "StringLiteral",
       "offset": 909,
       "length": 7,
-      "value": "\"4.0.2\""
+      "value": "\"5.0.0\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
@@ -24260,749 +24443,770 @@
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1082,
+      "offset": 1087,
+      "length": 9,
+      "value": "\"AppleTV\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1134,
       "length": 36,
       "value": "\"com.blueconic.BlueConicClientQueue\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1156,
+      "offset": 1208,
       "length": 21,
       "value": "\"yyyy-MM-dd HH:mm:ss\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1220,
+      "offset": 1272,
       "length": 12,
       "value": "\"INITIALIZE\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1269,
+      "offset": 1321,
       "length": 17,
       "value": "\"isMobileSDKInit\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1356,
+      "offset": 1408,
       "length": 11,
       "value": "\"BC_CLIENT\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1407,
+      "offset": 1459,
       "length": 14,
       "value": "\"BC_CONNECTOR\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1471,
+      "offset": 1523,
       "length": 16,
       "value": "\"BC_INTERACTION\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1530,
+      "offset": 1582,
       "length": 17,
       "value": "\"BC_DATA_MANAGER\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1591,
+      "offset": 1643,
       "length": 18,
       "value": "\"BC_EVENT_MANAGER\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1653,
+      "offset": 1705,
       "length": 18,
       "value": "\"BC_LISTENER_UTIL\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1730,
+      "offset": 1782,
       "length": 6,
       "value": "\"INFO\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1771,
+      "offset": 1823,
       "length": 9,
       "value": "\"WARNING\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1816,
+      "offset": 1868,
       "length": 7,
       "value": "\"ERROR\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1859,
+      "offset": 1911,
       "length": 7,
       "value": "\"DEBUG\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1982,
+      "offset": 2034,
       "length": 13,
       "value": "\"bccommitlog\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2048,
+      "offset": 2100,
       "length": 20,
       "value": "\"bcrequestcommitlog\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2109,
+      "offset": 2161,
       "length": 14,
       "value": "\"profilecache\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2160,
+      "offset": 2212,
       "length": 7,
       "value": "\".data\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2522,
+      "offset": 2574,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2581,
+      "offset": 2633,
       "length": 9,
       "value": "\"enabled\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2651,
+      "offset": 2703,
       "length": 11,
       "value": "\"blueconic\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2851,
+      "offset": 2903,
       "length": 21,
       "value": "\"bcsimulatorusername\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2943,
+      "offset": 2995,
       "length": 26,
       "value": "\"bcsimulatormobilesession\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3160,
+      "offset": 3212,
       "length": 6,
       "value": "\"json\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3205,
+      "offset": 3257,
       "length": 5,
       "value": "\"alt\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3256,
+      "offset": 3308,
       "length": 15,
       "value": "\"addProperties\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3316,
+      "offset": 3368,
       "length": 15,
       "value": "\"setProperties\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3382,
+      "offset": 3434,
       "length": 21,
       "value": "\"incrementProperties\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3445,
+      "offset": 3497,
       "length": 12,
       "value": "\"getProfile\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3502,
+      "offset": 3554,
+      "length": 15,
+      "value": "\"createProfile\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3614,
+      "length": 15,
+      "value": "\"deleteProfile\""
+    },
+    {
+      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3674,
       "length": 15,
       "value": "\"getProperties\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3560,
+      "offset": 3732,
       "length": 13,
       "value": "\"createEvent\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3625,
+      "offset": 3797,
       "length": 21,
       "value": "\"createTimelineEvent\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3717,
+      "offset": 3889,
       "length": 11,
       "value": "\"profileId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3765,
+      "offset": 3937,
       "length": 8,
       "value": "\"zoneId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3817,
+      "offset": 3989,
       "length": 13,
       "value": "\"forceCreate\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3876,
+      "offset": 4048,
       "length": 6,
       "value": "\"true\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3938,
+      "offset": 4110,
       "length": 18,
       "value": "\"mobile_app_ad_id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4041,
+      "offset": 4213,
       "length": 3,
       "value": "\"s\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4110,
+      "offset": 4282,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4149,
+      "offset": 4321,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4191,
+      "offset": 4363,
       "length": 13,
       "value": "\"pluginClass\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4241,
+      "offset": 4413,
       "length": 8,
       "value": "\"locale\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4294,
+      "offset": 4466,
       "length": 15,
       "value": "\"defaultLocale\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4344,
+      "offset": 4516,
       "length": 21,
       "value": "\"myInteractionTypeId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4409,
+      "offset": 4581,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4457,
+      "offset": 4629,
       "length": 14,
       "value": "\"myPluginType\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4517,
+      "offset": 4689,
       "length": 10,
       "value": "\"PAGEVIEW\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4578,
+      "offset": 4750,
       "length": 17,
       "value": "\"timelineContext\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4641,
+      "offset": 4813,
       "length": 13,
       "value": "\"interaction\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4701,
+      "offset": 4873,
       "length": 14,
       "value": "\"interactions\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4758,
+      "offset": 4930,
       "length": 10,
       "value": "\"position\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4812,
+      "offset": 4984,
       "length": 14,
       "value": "\"positionName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4867,
+      "offset": 5039,
       "length": 12,
       "value": "\"parameters\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4921,
+      "offset": 5093,
       "length": 12,
       "value": "\"dialogueId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4977,
+      "offset": 5149,
       "length": 14,
       "value": "\"dialogueName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5037,
+      "offset": 5209,
       "length": 15,
       "value": "\"interactionId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5126,
+      "offset": 5298,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5171,
+      "offset": 5343,
       "length": 12,
       "value": "\"parameters\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5223,
+      "offset": 5395,
       "length": 11,
       "value": "\"parameter\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5280,
+      "offset": 5452,
       "length": 13,
       "value": "\"connections\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5355,
+      "offset": 5527,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5394,
+      "offset": 5566,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5443,
+      "offset": 5615,
       "length": 10,
       "value": "\"segments\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5524,
+      "offset": 5696,
       "length": 9,
       "value": "\"entries\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5574,
+      "offset": 5746,
       "length": 8,
       "value": "\"values\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5621,
+      "offset": 5793,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5664,
+      "offset": 5836,
       "length": 12,
       "value": "\"identifier\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5741,
+      "offset": 5913,
       "length": 11,
       "value": "\"eventtype\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5789,
+      "offset": 5961,
       "length": 17,
       "value": "\"eventidentifier\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5846,
+      "offset": 6018,
       "length": 12,
       "value": "\"eventcount\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5892,
+      "offset": 6064,
       "length": 12,
       "value": "\"screenName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5952,
+      "offset": 6124,
       "length": 10,
       "value": "\"PAGEVIEW\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5998,
+      "offset": 6170,
       "length": 7,
       "value": "\"CLICK\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6040,
+      "offset": 6212,
       "length": 6,
       "value": "\"VIEW\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6087,
+      "offset": 6259,
       "length": 12,
       "value": "\"CONVERSION\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6172,
+      "offset": 6344,
       "length": 9,
       "value": "\"DEFAULT\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6228,
+      "offset": 6400,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6287,
+      "offset": 6459,
       "length": 13,
       "value": "\"BCSessionID\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6350,
+      "offset": 6522,
       "length": 12,
       "value": "\"text\/plain\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6411,
+      "offset": 6583,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6477,
+      "offset": 6649,
       "length": 17,
       "value": "\"Accept-Encoding\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6546,
+      "offset": 6718,
       "length": 6,
       "value": "\"gzip\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6591,
+      "offset": 6763,
       "length": 9,
       "value": "\"referer\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6663,
+      "offset": 6835,
       "length": 9,
       "value": "\"profile\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6699,
+      "offset": 6871,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6742,
+      "offset": 6914,
       "length": 15,
       "value": "\"interactionId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6792,
+      "offset": 6964,
       "length": 13,
       "value": "\"eventSource\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6836,
+      "offset": 7008,
       "length": 9,
       "value": "\"eventId\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6877,
+      "offset": 7049,
       "length": 11,
       "value": "\"timestamp\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6915,
+      "offset": 7087,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 7013,
+      "offset": 7185,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 7017,
+      "offset": 7189,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 7022,
+      "offset": 7194,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7067,
+      "offset": 7239,
       "length": 26,
       "value": "\"mobile_app_sessionlength\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7184,
+      "offset": 7356,
       "length": 15,
       "value": "\"mobile_app_id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7234,
+      "offset": 7406,
       "length": 17,
       "value": "\"mobile_app_name\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7294,
+      "offset": 7466,
       "length": 24,
       "value": "\"mobile_app_nameversion\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7351,
+      "offset": 7523,
       "length": 15,
       "value": "\"mobile_app_os\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7407,
+      "offset": 7579,
       "length": 22,
       "value": "\"mobile_app_osversion\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7466,
+      "offset": 7638,
       "length": 19,
       "value": "\"mobile_app_vendor\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7521,
+      "offset": 7693,
       "length": 18,
       "value": "\"mobile_app_model\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7580,
+      "offset": 7752,
       "length": 23,
       "value": "\"mobile_app_resolution\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7643,
+      "offset": 7815,
       "length": 22,
       "value": "\"mobile_app_pageviews\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7714,
+      "offset": 7886,
       "length": 20,
       "value": "\"CFBundleIdentifier\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7776,
+      "offset": 7948,
       "length": 21,
       "value": "\"CFBundleDisplayName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7845,
+      "offset": 8017,
       "length": 14,
       "value": "\"CFBundleName\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7904,
+      "offset": 8076,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
@@ -25191,98 +25395,98 @@
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2086,
+      "offset": 2106,
       "length": 15,
       "value": "\"mobile_app_id\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2140,
+      "offset": 2160,
       "length": 17,
       "value": "\"mobile_app_name\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2204,
+      "offset": 2224,
       "length": 24,
       "value": "\"mobile_app_nameversion\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2269,
+      "offset": 2289,
       "length": 19,
       "value": "\"mobile_app_vendor\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2328,
+      "offset": 2348,
       "length": 18,
       "value": "\"mobile_app_model\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2384,
+      "offset": 2404,
       "length": 16,
       "value": "\"mobile_app_dpi\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2942,
+      "offset": 3335,
       "length": 13,
       "value": "\"origin_type\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2999,
+      "offset": 3392,
       "length": 15,
       "value": "\"origin_source\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3058,
+      "offset": 3451,
       "length": 15,
       "value": "\"origin_detail\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3170,
+      "offset": 3563,
       "length": 12,
       "value": "\"devicetype\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3225,
+      "offset": 3618,
       "length": 14,
       "value": "\"visitedsites\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3279,
+      "offset": 3672,
       "length": 11,
       "value": "\"entrypage\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3341,
+      "offset": 3734,
       "length": 22,
       "value": "\"received_from_system\""
     },
     {
       "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3418,
+      "offset": 3811,
       "length": 26,
       "value": "\"received_from_connection\""
     }

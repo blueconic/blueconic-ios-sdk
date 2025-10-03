@@ -682,6 +682,16 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// \param callback The callback function when results are ready.
 ///
 - (void)createTimelineEventById:(NSString * _Nonnull)eventId eventType:(NSString * _Nonnull)eventType eventDate:(NSDate * _Nonnull)eventDate properties:(NSDictionary<NSString *, id> * _Nonnull)properties callback:(void (^ _Nullable)(Callback * _Nonnull))callback;
+/// Registers a recommendation event for the given store ID, action and item IDs.
+/// \param storeId The ID of the content store. 
+///
+/// \param action The action performed. Actions can be <code>view</code>, <code>click</code>, <code>recommendation_view</code>, <code>entrypage</code>, <code>shoppingcart</code>, <code>order</code>.
+///
+/// \param itemIds A list of item IDs involved in the action. 
+///
+/// \param callback The callback function containing information about the operation. 
+///
+- (void)createRecommendationEventWithStoreId:(NSString * _Nonnull)storeId action:(NSString * _Nonnull)action itemIds:(NSArray<NSString *> * _Nonnull)itemIds callback:(void (^ _Nullable)(Callback * _Nonnull))callback;
 /// Register plugin class. Assign a custom plugin to the list of available plugins.
 /// Which are then validated during the PAGEVIEW event, which creates and executes the correct plugin for you.
 /// <h4>Example</h4>
@@ -1132,6 +1142,18 @@ SWIFT_CLASS("_TtC15BlueConicClient23PropertiesDialogueEvent")
 @property (nonatomic, readonly, copy) NSString * _Nonnull position;
 @property (nonatomic, readonly, copy) NSString * _Nonnull data;
 - (nonnull instancetype)initWithVariantId:(NSString * _Nonnull)variantId position:(NSString * _Nonnull)position data:(NSString * _Nonnull)data OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC15BlueConicClient28RecommendationsDialogueEvent")
+@interface RecommendationsDialogueEvent : Event
+@property (nonatomic, readonly, copy) NSString * _Nonnull variantId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull position;
+@property (nonatomic, readonly, copy) NSString * _Nonnull storeId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull recommendations;
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+- (nonnull instancetype)initWithVariantId:(NSString * _Nonnull)variantId position:(NSString * _Nonnull)position storeId:(NSString * _Nonnull)storeId recommendations:(NSString * _Nonnull)recommendations OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1849,6 +1871,16 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// \param callback The callback function when results are ready.
 ///
 - (void)createTimelineEventById:(NSString * _Nonnull)eventId eventType:(NSString * _Nonnull)eventType eventDate:(NSDate * _Nonnull)eventDate properties:(NSDictionary<NSString *, id> * _Nonnull)properties callback:(void (^ _Nullable)(Callback * _Nonnull))callback;
+/// Registers a recommendation event for the given store ID, action and item IDs.
+/// \param storeId The ID of the content store. 
+///
+/// \param action The action performed. Actions can be <code>view</code>, <code>click</code>, <code>recommendation_view</code>, <code>entrypage</code>, <code>shoppingcart</code>, <code>order</code>.
+///
+/// \param itemIds A list of item IDs involved in the action. 
+///
+/// \param callback The callback function containing information about the operation. 
+///
+- (void)createRecommendationEventWithStoreId:(NSString * _Nonnull)storeId action:(NSString * _Nonnull)action itemIds:(NSArray<NSString *> * _Nonnull)itemIds callback:(void (^ _Nullable)(Callback * _Nonnull))callback;
 /// Register plugin class. Assign a custom plugin to the list of available plugins.
 /// Which are then validated during the PAGEVIEW event, which creates and executes the correct plugin for you.
 /// <h4>Example</h4>
@@ -2299,6 +2331,18 @@ SWIFT_CLASS("_TtC15BlueConicClient23PropertiesDialogueEvent")
 @property (nonatomic, readonly, copy) NSString * _Nonnull position;
 @property (nonatomic, readonly, copy) NSString * _Nonnull data;
 - (nonnull instancetype)initWithVariantId:(NSString * _Nonnull)variantId position:(NSString * _Nonnull)position data:(NSString * _Nonnull)data OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC15BlueConicClient28RecommendationsDialogueEvent")
+@interface RecommendationsDialogueEvent : Event
+@property (nonatomic, readonly, copy) NSString * _Nonnull variantId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull position;
+@property (nonatomic, readonly, copy) NSString * _Nonnull storeId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull recommendations;
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+- (nonnull instancetype)initWithVariantId:(NSString * _Nonnull)variantId position:(NSString * _Nonnull)position storeId:(NSString * _Nonnull)storeId recommendations:(NSString * _Nonnull)recommendations OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import Foundation
 import Swift
@@ -27,6 +27,7 @@ import _SwiftConcurrencyShims
   @objc public func publishUpdateValuesEvent(selector: Swift.String, values: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   public enum EventName : Swift.String {
     case propertiesDialogue
+    case recommendationsDialogue
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -160,6 +161,7 @@ import _SwiftConcurrencyShims
   @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func createTimelineEvent(_ eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func createTimelineEventById(_ eventId: Swift.String, eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc public func createRecommendationEvent(storeId: Swift.String, action: Swift.String, itemIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)?)
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass)
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass, className: Swift.String)
   @objc public func getSegments() -> [BlueConicClient.BlueConicSegment]
@@ -209,6 +211,25 @@ import _SwiftConcurrencyShims
   @objc public func save()
   @objc override public func handleEvent(_ event: BlueConicClient.Event)
   @objc public func touchAction(_ sender: UIKit.UIControl)
+  @objc deinit
+}
+@objc public class RecommendationsDialogueEvent : BlueConicClient.Event {
+  @objc public var variantId: Swift.String {
+    @objc get
+  }
+  @objc public var position: Swift.String {
+    @objc get
+  }
+  @objc public var storeId: Swift.String {
+    @objc get
+  }
+  @objc public var recommendations: Swift.String {
+    @objc get
+  }
+  @objc override public var name: Swift.String {
+    @objc get
+  }
+  @objc public init(variantId: Swift.String, position: Swift.String, storeId: Swift.String, recommendations: Swift.String)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class VisitListener : BlueConicClient.BlueConicPlugin {
@@ -681,7 +702,7 @@ extension BlueConicClient.JSON : Swift.Codable {
   public func addValues(_ property: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   public func setValue(_ name: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   public func setValues(_ name: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  public func incrementValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  public func incrementValue(_ property: Swift.String, value: Swift.Int, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class InteractionContext : ObjectiveC.NSObject {
@@ -758,6 +779,12 @@ extension Swift.KeyedDecodingContainer {
   public class func stringToJson(_ json: Swift.String) -> Any?
   public class func getCurrentTime() -> Swift.String
   public class func getCurrentDate() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RecommendationsDialogue : BlueConicClient.BlueConicPlugin {
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class FormSubmitEvent : BlueConicClient.ClickEvent {

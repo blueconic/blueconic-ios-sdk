@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
     # BlueConic General
     spec.name               = 'BlueConicClient'
-    spec.version            = '5.0.0'
+    spec.version            = '5.1.0'
     spec.license            = { :type => 'Commercial', :file => 'LICENSE' }
     spec.swift_version      = '5.8.1'
     spec.homepage           = 'https://blueconic.com'
@@ -13,10 +13,10 @@ Pod::Spec.new do |spec|
     spec.changelog          = 'https://github.com/blueconic/blueconic-ios-sdk/blob/main/CHANGELOG.md'
 
     # BlueConic Resources
-    spec.resources = ['BlueConicClient.xcframework/ios-arm64/*.{png}', 'BlueConicClient.xcframework/ios-arm64/*/*.{png}']
+    spec.resources = ['BlueConicClient.xcframework/ios-arm64/*.{png}', 'BlueConicClient.xcframework/ios-arm64/*/*.{png}', 'BlueConicClient.xcframework/tvos-arm64/*.{png}', 'BlueConicClient.xcframework/tvos-arm64/*/*.{png}']
 
     # BlueConic Sources
-    spec.platform           = :ios, '12.0'
+    spec.platform           = :ios, '13.0'
     spec.source             = { :git => 'https://github.com/blueconic/blueconic-ios-sdk.git', :tag => "#{spec.version}" }
     spec.default_subspec    = 'Core'
 

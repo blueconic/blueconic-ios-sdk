@@ -708,6 +708,43 @@
                 "moduleName": "BlueConicClient"
               },
               {
+                "kind": "Var",
+                "name": "recommendationsDialogue",
+                "printedName": "recommendationsDialogue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.BlueConicEventManager.EventName.Type) -> BlueConicClient.BlueConicEventManager.EventName",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventName",
+                        "printedName": "BlueConicClient.BlueConicEventManager.EventName",
+                        "usr": "s:15BlueConicClient0aB12EventManagerC0D4NameO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BlueConicClient.BlueConicEventManager.EventName.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "EventName",
+                            "printedName": "BlueConicClient.BlueConicEventManager.EventName",
+                            "usr": "s:15BlueConicClient0aB12EventManagerC0D4NameO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15BlueConicClient0aB12EventManagerC0D4NameO23recommendationsDialogueyA2EmF",
+                "mangledName": "$s15BlueConicClient0aB12EventManagerC0D4NameO23recommendationsDialogueyA2EmF",
+                "moduleName": "BlueConicClient"
+              },
+              {
                 "kind": "Constructor",
                 "name": "init",
                 "printedName": "init(rawValue:)",
@@ -1067,6 +1104,16 @@
             "usr": "c:@M@BlueConicClient@objc(pl)BlueConicPlugin",
             "mangledName": "$s15BlueConicClient0aB6PluginP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -5599,6 +5646,81 @@
           },
           {
             "kind": "Function",
+            "name": "createRecommendationEvent",
+            "printedName": "createRecommendationEvent(storeId:action:itemIds:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BlueConicClient.Callback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BlueConicClient.Callback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Callback",
+                        "printedName": "BlueConicClient.Callback",
+                        "usr": "c:@M@BlueConicClient@objc(cs)Callback"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BlueConicClient@objc(cs)BlueConic(im)createRecommendationEventWithStoreId:action:itemIds:callback:",
+            "mangledName": "$s15BlueConicClient0aB0C25createRecommendationEvent7storeId6action7itemIds8callbackySS_SSSaySSGyAA8CallbackCcSgtF",
+            "moduleName": "BlueConicClient",
+            "objc_name": "createRecommendationEventWithStoreId:action:itemIds:callback:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "registerPluginClass",
             "printedName": "registerPluginClass(_:)",
             "children": [
@@ -7003,6 +7125,399 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "RecommendationsDialogueEvent",
+        "printedName": "RecommendationsDialogueEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "variantId",
+            "printedName": "variantId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(py)variantId",
+            "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC9variantIdSSvp",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(im)variantId",
+                "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC9variantIdSSvg",
+                "moduleName": "BlueConicClient",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "position",
+            "printedName": "position",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(py)position",
+            "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC8positionSSvp",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(im)position",
+                "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC8positionSSvg",
+                "moduleName": "BlueConicClient",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "storeId",
+            "printedName": "storeId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(py)storeId",
+            "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC7storeIdSSvp",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(im)storeId",
+                "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC7storeIdSSvg",
+                "moduleName": "BlueConicClient",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "recommendations",
+            "printedName": "recommendations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(py)recommendations",
+            "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC15recommendationsSSvp",
+            "moduleName": "BlueConicClient",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(im)recommendations",
+                "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC15recommendationsSSvg",
+                "moduleName": "BlueConicClient",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(py)name",
+            "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC4nameSSvp",
+            "moduleName": "BlueConicClient",
+            "overriding": true,
+            "objc_name": "name",
+            "declAttributes": [
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(im)name",
+                "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC4nameSSvg",
+                "moduleName": "BlueConicClient",
+                "overriding": true,
+                "objc_name": "name",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(variantId:position:storeId:recommendations:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RecommendationsDialogueEvent",
+                "printedName": "BlueConicClient.RecommendationsDialogueEvent",
+                "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(im)initWithVariantId:position:storeId:recommendations:",
+            "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC9variantId8position05storeH015recommendationsACSS_S3Stcfc",
+            "moduleName": "BlueConicClient",
+            "objc_name": "initWithVariantId:position:storeId:recommendations:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RecommendationsDialogueEvent",
+                "printedName": "BlueConicClient.RecommendationsDialogueEvent",
+                "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent(im)init",
+            "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventCACycfc",
+            "moduleName": "BlueConicClient",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@BlueConicClient@objc(cs)RecommendationsDialogueEvent",
+        "mangledName": "$s15BlueConicClient28RecommendationsDialogueEventC",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@BlueConicClient@objc(cs)Event",
+        "superclassNames": [
+          "BlueConicClient.Event",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "VisitListener",
         "printedName": "VisitListener",
         "children": [
@@ -7120,6 +7635,16 @@
             "usr": "c:@M@BlueConicClient@objc(pl)BlueConicPlugin",
             "mangledName": "$s15BlueConicClient0aB6PluginP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -9044,6 +9569,16 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -18526,9 +19061,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               },
               {
                 "kind": "TypeNominal",
@@ -18559,8 +19094,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:15BlueConicClient7ProfileC14incrementValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
-            "mangledName": "$s15BlueConicClient7ProfileC14incrementValue_5value8callbackySS_SSyAA8CallbackCcSgtF",
+            "usr": "s:15BlueConicClient7ProfileC14incrementValue_5value8callbackySS_SiyAA8CallbackCcSgtF",
+            "mangledName": "$s15BlueConicClient7ProfileC14incrementValue_5value8callbackySS_SiyAA8CallbackCcSgtF",
             "moduleName": "BlueConicClient",
             "declAttributes": [
               "AccessControl",
@@ -21087,6 +21622,137 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "RecommendationsDialogue",
+        "printedName": "RecommendationsDialogue",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(client:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RecommendationsDialogue",
+                "printedName": "BlueConicClient.RecommendationsDialogue",
+                "usr": "s:15BlueConicClient23RecommendationsDialogueC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BlueConic",
+                "printedName": "BlueConicClient.BlueConic",
+                "usr": "c:@M@BlueConicClient@objc(cs)BlueConic"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "InteractionContext",
+                "printedName": "BlueConicClient.InteractionContext",
+                "usr": "c:@M@BlueConicClient@objc(cs)InteractionContext"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15BlueConicClient23RecommendationsDialogueC6client7contextAcA0aB0C_AA18InteractionContextCtcfc",
+            "mangledName": "$s15BlueConicClient23RecommendationsDialogueC6client7contextAcA0aB0C_AA18InteractionContextCtcfc",
+            "moduleName": "BlueConicClient",
+            "objc_name": "initWithClient:context:",
+            "declAttributes": [
+              "ObjC",
+              "Convenience",
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "onLoad",
+            "printedName": "onLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient23RecommendationsDialogueC6onLoadyyF",
+            "mangledName": "$s15BlueConicClient23RecommendationsDialogueC6onLoadyyF",
+            "moduleName": "BlueConicClient",
+            "objc_name": "onLoad",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDestroy",
+            "printedName": "onDestroy()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15BlueConicClient23RecommendationsDialogueC9onDestroyyyF",
+            "mangledName": "$s15BlueConicClient23RecommendationsDialogueC9onDestroyyyF",
+            "moduleName": "BlueConicClient",
+            "objc_name": "onDestroy",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15BlueConicClient23RecommendationsDialogueC",
+        "mangledName": "$s15BlueConicClient23RecommendationsDialogueC",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BlueConicPlugin",
+            "printedName": "BlueConicPlugin",
+            "usr": "c:@M@BlueConicClient@objc(pl)BlueConicPlugin",
+            "mangledName": "$s15BlueConicClient0aB6PluginP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlueConicClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "FormSubmitEvent",
         "printedName": "FormSubmitEvent",
         "children": [
@@ -22901,2592 +23567,2725 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "IntegerLiteral",
       "offset": 876,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "Dictionary",
       "offset": 1547,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "Array",
       "offset": 1703,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "Array",
       "offset": 2028,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3920,
+      "offset": 4174,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5027,
+      "offset": 5281,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "Array",
-      "offset": 8146,
+      "offset": 8415,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "Array",
-      "offset": 8556,
+      "offset": 8825,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "Array",
-      "offset": 8968,
+      "offset": 9237,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 9366,
+      "offset": 9635,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "Array",
-      "offset": 9775,
+      "offset": 10044,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 9988,
+      "offset": 10257,
       "length": 25,
       "value": "\"propertiesDialogueEvent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Events\/PropertiesDialogueEvent.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/BlueConicEventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 10322,
+      "length": 30,
+      "value": "\"recommendationsDialogueEvent\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Events\/PropertiesDialogueEvent.swift",
       "kind": "StringLiteral",
       "offset": 282,
       "length": 25,
       "value": "\"propertiesDialogueEvent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/ProfileHash.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/ProfileHash.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 3,
       "value": "\";\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/ProfileHash.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/ProfileHash.swift",
       "kind": "IntegerLiteral",
       "offset": 280,
       "length": 5,
       "value": "10000"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "StringLiteral",
       "offset": 271,
       "length": 21,
       "value": "\"BC_ENGAGMENTSERVICE\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "StringLiteral",
       "offset": 385,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "StringLiteral",
       "offset": 436,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "BooleanLiteral",
       "offset": 491,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "BooleanLiteral",
       "offset": 533,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "Array",
       "offset": 587,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "IntegerLiteral",
       "offset": 707,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "BooleanLiteral",
       "offset": 746,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "BooleanLiteral",
       "offset": 1606,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "Array",
       "offset": 1638,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/EngagementService.swift",
       "kind": "BooleanLiteral",
       "offset": 1662,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/EventServiceBase.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/eventmanager\/EventServiceBase.swift",
       "kind": "StringLiteral",
       "offset": 271,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "IntegerLiteral",
       "offset": 2909,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "BooleanLiteral",
       "offset": 3244,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "BooleanLiteral",
       "offset": 3292,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "BooleanLiteral",
       "offset": 3330,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "IntegerLiteral",
       "offset": 3403,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/FullscreenLightbox.swift",
       "kind": "FloatLiteral",
       "offset": 3413,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 946,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 989,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 1031,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1069,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 1123,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/configuration\/BlueConicConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 1181,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "StringLiteral",
       "offset": 271,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "StringLiteral",
       "offset": 316,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "FloatLiteral",
       "offset": 707,
       "length": 3,
       "value": "5.0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "BooleanLiteral",
       "offset": 850,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "Dictionary",
       "offset": 11590,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "Dictionary",
       "offset": 12169,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "Dictionary",
       "offset": 12769,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConic.swift",
       "kind": "Dictionary",
       "offset": 13374,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Events\/UpdateContentEvent.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Events\/UpdateContentEvent.swift",
       "kind": "StringLiteral",
       "offset": 474,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "BooleanLiteral",
       "offset": 803,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 1034,
+      "offset": 1035,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 1400,
+      "offset": 1401,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "FloatLiteral",
-      "offset": 1636,
+      "offset": 1637,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "FloatLiteral",
-      "offset": 1683,
+      "offset": 1684,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 1726,
+      "offset": 1727,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicImpl.swift",
       "kind": "StringLiteral",
-      "offset": 1881,
+      "offset": 1882,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/PreferredHourListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/PreferredHourListener.swift",
       "kind": "StringLiteral",
       "offset": 352,
       "length": 16,
       "value": "\"PREFERRED_HOUR\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/PreferredHourListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/PreferredHourListener.swift",
       "kind": "StringLiteral",
       "offset": 419,
       "length": 10,
       "value": "\"property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/PreferredHourListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/PreferredHourListener.swift",
       "kind": "StringLiteral",
       "offset": 478,
       "length": 8,
       "value": "\"locale\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/PreferredHourListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/PreferredHourListener.swift",
       "kind": "StringLiteral",
       "offset": 539,
       "length": 17,
       "value": "\"profileproperty\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
       "kind": "StringLiteral",
       "offset": 545,
       "length": 5,
       "value": "\"add\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
       "kind": "StringLiteral",
       "offset": 562,
       "length": 7,
       "value": "\"merge\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
       "kind": "StringLiteral",
       "offset": 581,
       "length": 5,
       "value": "\"set\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
       "kind": "StringLiteral",
       "offset": 605,
       "length": 14,
       "value": "\"set_if_empty\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
       "kind": "StringLiteral",
       "offset": 1000,
       "length": 16,
       "value": "\"BC_RULESERVICE\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/RuleService.swift",
       "kind": "Array",
       "offset": 1068,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 435,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 470,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "BooleanLiteral",
       "offset": 945,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 1068,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 1073,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 1078,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1121,
       "length": 17,
       "value": "\"visits_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1170,
       "length": 11,
       "value": "\"nr_visits\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1211,
       "length": 9,
       "value": "\"nr_days\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1261,
       "length": 20,
       "value": "\"nr_visits_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1325,
       "length": 23,
       "value": "\"total_visits_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1393,
       "length": 24,
       "value": "\"start_session_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1462,
       "length": 24,
       "value": "\"nr_page_views_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1536,
       "length": 29,
       "value": "\"session_page_views_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1613,
       "length": 27,
       "value": "\"first_visit_date_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1687,
       "length": 26,
       "value": "\"last_visit_date_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1763,
       "length": 29,
       "value": "\"average_visit_time_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1840,
       "length": 27,
       "value": "\"total_visit_time_property\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "StringLiteral",
       "offset": 1908,
       "length": 18,
       "value": "\"directVisitsOnly\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 11088,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 11120,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 11150,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 11179,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "FloatLiteral",
       "offset": 11214,
       "length": 3,
       "value": "0.0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 11243,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/VisitListener.swift",
       "kind": "IntegerLiteral",
       "offset": 11277,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/FormListeningService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRESTRequestCommand.swift",
+      "kind": "StringLiteral",
+      "offset": 878,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRESTRequestCommand.swift",
+      "kind": "StringLiteral",
+      "offset": 901,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRESTRequestCommand.swift",
+      "kind": "Dictionary",
+      "offset": 941,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/FormListeningService.swift",
       "kind": "StringLiteral",
       "offset": 285,
       "length": 16,
       "value": "\"BC_FORMSERVICE\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/FormListeningService.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/FormListeningService.swift",
       "kind": "Array",
       "offset": 353,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Events\/Event.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Events\/Event.swift",
       "kind": "Array",
       "offset": 533,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
       "kind": "BooleanLiteral",
       "offset": 580,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCommitLog.swift",
       "kind": "IntegerLiteral",
       "offset": 15194,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 302,
       "length": 6,
       "value": "\"pre_\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 346,
       "length": 9,
       "value": "\"pre_any\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 396,
       "length": 12,
       "value": "\"pre_header\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 447,
       "length": 10,
       "value": "\"pre_body\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 498,
       "length": 12,
       "value": "\"pre_mobile\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 552,
       "length": 13,
       "value": "\"pre_context\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 599,
       "length": 5,
       "value": "\"any\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 649,
       "length": 3,
       "value": "\"K\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 692,
       "length": 6,
       "value": "\"text\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 738,
       "length": 10,
       "value": "\"contains\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 786,
       "length": 9,
       "value": "\"matches\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 831,
       "length": 7,
       "value": "\"empty\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 888,
       "length": 10,
       "value": "\"scoreurl\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 950,
       "length": 13,
       "value": "\"interesturl\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1019,
       "length": 17,
       "value": "\"scoreformsubmit\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1095,
       "length": 20,
       "value": "\"interestformsubmit\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1166,
       "length": 12,
       "value": "\"scoreclick\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1232,
       "length": 15,
       "value": "\"interestclick\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1300,
       "length": 14,
       "value": "\"scorecontent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1370,
       "length": 17,
       "value": "\"interestcontent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1438,
       "length": 12,
       "value": "\"scoreevent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1504,
       "length": 15,
       "value": "\"interestevent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1577,
       "length": 18,
       "value": "\"scoresocialevent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1656,
       "length": 21,
       "value": "\"interestsocialevent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1729,
       "length": 17,
       "value": "\"containsmatches\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1790,
       "length": 10,
       "value": "\"ruletype\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1851,
       "length": 17,
       "value": "\"profileproperty\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1924,
       "length": 17,
       "value": "\"profileProperty\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 1988,
       "length": 13,
       "value": "\"contentarea\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2044,
       "length": 10,
       "value": "\"selector\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2096,
       "length": 9,
       "value": "\"context\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2149,
       "length": 11,
       "value": "\"parameter\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2200,
       "length": 7,
       "value": "\"event\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2258,
       "length": 17,
       "value": "\"contextposition\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2314,
       "length": 6,
       "value": "\"form\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2364,
       "length": 11,
       "value": "\"clickarea\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2415,
       "length": 7,
       "value": "\"words\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2466,
       "length": 11,
       "value": "\"interests\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2518,
       "length": 8,
       "value": "\"points\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2564,
       "length": 5,
       "value": "\"url\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2610,
       "length": 8,
       "value": "\"values\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2659,
       "length": 8,
       "value": "\"regexp\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2709,
       "length": 8,
       "value": "\"addset\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2762,
       "length": 11,
       "value": "\"valuetext\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2812,
       "length": 6,
       "value": "\"TIME\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2857,
       "length": 6,
       "value": "\"days\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2902,
       "length": 6,
       "value": "\"data\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 2958,
       "length": 16,
       "value": "\"selectedoption\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3013,
       "length": 6,
       "value": "\"date\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3062,
       "length": 10,
       "value": "\"datetime\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3113,
       "length": 8,
       "value": "\"action\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3160,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3209,
       "length": 10,
       "value": "\"onchange\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3263,
       "length": 11,
       "value": "\"formfield\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3323,
       "length": 15,
       "value": "\"formselection\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3388,
       "length": 16,
       "value": "\"clickselection\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3448,
       "length": 11,
       "value": "\"converter\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3502,
       "length": 10,
       "value": "\"mappings\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3554,
       "length": 9,
       "value": "\"version\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3617,
       "length": 21,
       "value": "\"form_listener_rules\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3690,
       "length": 18,
       "value": "\"engagement_rules\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3748,
       "length": 7,
       "value": "\"rules\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3804,
       "length": 15,
       "value": "\"propertyRules\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3859,
       "length": 7,
       "value": "\"decay\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3907,
       "length": 4,
       "value": "\"nr\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 3955,
       "length": 5,
       "value": "\"url\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4011,
       "length": 13,
       "value": "\"urlreferrer\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4066,
       "length": 4,
       "value": "\"or\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4133,
       "length": 3,
       "value": "\"n\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4177,
       "length": 3,
       "value": "\"p\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4379,
       "length": 3,
       "value": "\"o\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4430,
       "length": 3,
       "value": "\"c\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4474,
       "length": 12,
       "value": "\"identifier\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4543,
       "length": 10,
       "value": "\"original\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4597,
       "length": 11,
       "value": "\"converted\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/PluginConstants.swift",
       "kind": "StringLiteral",
       "offset": 4645,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Events\/UpdateValuesEvent.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Events\/UpdateValuesEvent.swift",
       "kind": "StringLiteral",
       "offset": 434,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicHTTPClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 260,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicHTTPClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 295,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicHTTPClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3178,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 1312,
       "length": 3,
       "value": "999"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 1344,
       "length": 3,
       "value": "900"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 1374,
       "length": 3,
       "value": "902"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 1399,
       "length": 3,
       "value": "901"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 1423,
       "length": 3,
       "value": "500"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 1450,
       "length": 3,
       "value": "490"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 2722,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 2738,
       "length": 4,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 2752,
       "length": 5,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 2767,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 2787,
       "length": 4,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 2801,
       "length": 7,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "Array",
       "offset": 3219,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "Array",
       "offset": 6713,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "Dictionary",
       "offset": 6767,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "StringLiteral",
       "offset": 6811,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 6856,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "BooleanLiteral",
       "offset": 6941,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 16998,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "IntegerLiteral",
       "offset": 18228,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "BooleanLiteral",
       "offset": 35132,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/lib\/SwiftyJSON.swift",
       "kind": "BooleanLiteral",
       "offset": 35180,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
       "length": 24,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
       "offset": 511,
       "length": 14,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
       "offset": 535,
       "length": 25,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
       "offset": 570,
       "length": 17,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/BlueConicCallback.swift",
       "kind": "IntegerLiteral",
       "offset": 597,
       "length": 13,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicConnector.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRPCConnector.swift",
       "kind": "IntegerLiteral",
-      "offset": 723,
+      "offset": 625,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicConnector.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRPCConnector.swift",
       "kind": "IntegerLiteral",
-      "offset": 755,
+      "offset": 657,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRequestCommand.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRPCRequestCommand.swift",
       "kind": "IntegerLiteral",
-      "offset": 274,
+      "offset": 277,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRequestCommand.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/connection\/BlueConicRPCRequestCommand.swift",
       "kind": "BooleanLiteral",
-      "offset": 462,
+      "offset": 465,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 324,
       "length": 7,
       "value": "\"plist\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 367,
       "length": 15,
       "value": "\"bc_server_url\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 416,
       "length": 11,
       "value": "\"bc_shared\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 464,
       "length": 10,
       "value": "\"bc_debug\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 507,
       "length": 8,
       "value": "\"method\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 548,
       "length": 8,
       "value": "\"result\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 593,
       "length": 12,
       "value": "\"properties\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 643,
       "length": 8,
       "value": "\"domain\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 691,
       "length": 15,
       "value": "\"domainGroupId\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 735,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 772,
       "length": 8,
       "value": "\"params\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 816,
       "length": 3,
       "value": "\"#\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 861,
       "length": 3,
       "value": "\"\/\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 909,
       "length": 7,
-      "value": "\"5.0.0\""
+      "value": "\"5.1.0\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 956,
       "length": 7,
       "value": "\"5.8.1\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1004,
       "length": 20,
       "value": "\"BlueConic iOS SDK \""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1087,
       "length": 9,
       "value": "\"AppleTV\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1134,
       "length": 36,
       "value": "\"com.blueconic.BlueConicClientQueue\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1208,
       "length": 21,
       "value": "\"yyyy-MM-dd HH:mm:ss\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1272,
       "length": 12,
       "value": "\"INITIALIZE\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1321,
       "length": 17,
       "value": "\"isMobileSDKInit\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1408,
       "length": 11,
       "value": "\"BC_CLIENT\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1459,
       "length": 14,
       "value": "\"BC_CONNECTOR\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1523,
       "length": 16,
       "value": "\"BC_INTERACTION\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1582,
       "length": 17,
       "value": "\"BC_DATA_MANAGER\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1643,
       "length": 18,
       "value": "\"BC_EVENT_MANAGER\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 1705,
       "length": 18,
       "value": "\"BC_LISTENER_UTIL\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1782,
+      "offset": 1769,
+      "length": 19,
+      "value": "\"BC_REST_CONNECTOR\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1847,
       "length": 6,
       "value": "\"INFO\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1823,
+      "offset": 1888,
       "length": 9,
       "value": "\"WARNING\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1868,
+      "offset": 1933,
       "length": 7,
       "value": "\"ERROR\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1911,
+      "offset": 1976,
       "length": 7,
       "value": "\"DEBUG\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2034,
+      "offset": 2099,
       "length": 13,
       "value": "\"bccommitlog\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2100,
+      "offset": 2165,
       "length": 20,
       "value": "\"bcrequestcommitlog\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2161,
+      "offset": 2226,
       "length": 14,
       "value": "\"profilecache\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2212,
+      "offset": 2277,
       "length": 7,
       "value": "\".data\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2574,
+      "offset": 2639,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2633,
+      "offset": 2698,
       "length": 9,
       "value": "\"enabled\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2703,
+      "offset": 2768,
       "length": 11,
       "value": "\"blueconic\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2903,
+      "offset": 2968,
       "length": 21,
       "value": "\"bcsimulatorusername\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2995,
+      "offset": 3060,
       "length": 26,
       "value": "\"bcsimulatormobilesession\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3212,
+      "offset": 3277,
       "length": 6,
       "value": "\"json\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3257,
+      "offset": 3322,
       "length": 5,
       "value": "\"alt\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3308,
+      "offset": 3373,
       "length": 15,
       "value": "\"addProperties\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3368,
+      "offset": 3433,
       "length": 15,
       "value": "\"setProperties\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3434,
+      "offset": 3499,
       "length": 21,
       "value": "\"incrementProperties\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3497,
+      "offset": 3562,
       "length": 12,
       "value": "\"getProfile\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3554,
+      "offset": 3619,
       "length": 15,
       "value": "\"createProfile\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3614,
+      "offset": 3679,
       "length": 15,
       "value": "\"deleteProfile\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3674,
+      "offset": 3739,
       "length": 15,
       "value": "\"getProperties\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3732,
+      "offset": 3797,
       "length": 13,
       "value": "\"createEvent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3797,
+      "offset": 3862,
       "length": 21,
       "value": "\"createTimelineEvent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3889,
+      "offset": 3921,
+      "length": 17,
+      "value": "\"recommendations\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3995,
+      "length": 7,
+      "value": "\"stats\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 4073,
       "length": 11,
       "value": "\"profileId\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3937,
+      "offset": 4121,
       "length": 8,
       "value": "\"zoneId\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3989,
+      "offset": 4173,
       "length": 13,
       "value": "\"forceCreate\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4048,
+      "offset": 4232,
       "length": 6,
       "value": "\"true\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4110,
+      "offset": 4294,
       "length": 18,
       "value": "\"mobile_app_ad_id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4213,
+      "offset": 4397,
       "length": 3,
       "value": "\"s\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4282,
+      "offset": 4466,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4321,
+      "offset": 4505,
       "length": 6,
       "value": "\"name\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4363,
+      "offset": 4547,
       "length": 13,
       "value": "\"pluginClass\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4413,
+      "offset": 4597,
       "length": 8,
       "value": "\"locale\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4466,
+      "offset": 4650,
       "length": 15,
       "value": "\"defaultLocale\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4516,
+      "offset": 4700,
       "length": 21,
       "value": "\"myInteractionTypeId\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4581,
+      "offset": 4765,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4629,
+      "offset": 4813,
       "length": 14,
       "value": "\"myPluginType\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4689,
+      "offset": 4873,
       "length": 10,
       "value": "\"PAGEVIEW\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4750,
+      "offset": 4934,
       "length": 17,
       "value": "\"timelineContext\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4813,
+      "offset": 4997,
       "length": 13,
       "value": "\"interaction\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4873,
+      "offset": 5057,
       "length": 14,
       "value": "\"interactions\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4930,
+      "offset": 5114,
       "length": 10,
       "value": "\"position\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 4984,
+      "offset": 5168,
       "length": 14,
       "value": "\"positionName\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5039,
+      "offset": 5223,
       "length": 12,
       "value": "\"parameters\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5093,
+      "offset": 5277,
       "length": 12,
       "value": "\"dialogueId\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5149,
+      "offset": 5333,
       "length": 14,
       "value": "\"dialogueName\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5209,
+      "offset": 5393,
       "length": 15,
       "value": "\"interactionId\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5298,
+      "offset": 5482,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5343,
+      "offset": 5527,
       "length": 12,
       "value": "\"parameters\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5395,
+      "offset": 5579,
       "length": 11,
       "value": "\"parameter\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5452,
+      "offset": 5636,
       "length": 13,
       "value": "\"connections\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5527,
+      "offset": 5711,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5566,
+      "offset": 5750,
       "length": 6,
       "value": "\"name\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5615,
+      "offset": 5799,
       "length": 10,
       "value": "\"segments\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5696,
+      "offset": 5880,
       "length": 9,
       "value": "\"entries\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5746,
+      "offset": 5930,
       "length": 8,
       "value": "\"values\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5793,
+      "offset": 5977,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5836,
+      "offset": 6020,
       "length": 12,
       "value": "\"identifier\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5913,
+      "offset": 6097,
       "length": 11,
       "value": "\"eventtype\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5961,
+      "offset": 6145,
       "length": 17,
       "value": "\"eventidentifier\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6018,
+      "offset": 6202,
       "length": 12,
       "value": "\"eventcount\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6064,
+      "offset": 6248,
       "length": 12,
       "value": "\"screenName\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6124,
+      "offset": 6308,
       "length": 10,
       "value": "\"PAGEVIEW\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6170,
+      "offset": 6354,
       "length": 7,
       "value": "\"CLICK\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6212,
+      "offset": 6396,
       "length": 6,
       "value": "\"VIEW\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6259,
+      "offset": 6443,
       "length": 12,
       "value": "\"CONVERSION\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6344,
+      "offset": 6528,
       "length": 9,
       "value": "\"DEFAULT\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6400,
+      "offset": 6584,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6459,
+      "offset": 6643,
       "length": 13,
       "value": "\"BCSessionID\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6522,
+      "offset": 6706,
       "length": 12,
       "value": "\"text\/plain\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6583,
+      "offset": 6766,
+      "length": 18,
+      "value": "\"application\/json\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 6833,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6649,
+      "offset": 6899,
       "length": 17,
       "value": "\"Accept-Encoding\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6718,
+      "offset": 6968,
       "length": 6,
       "value": "\"gzip\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6763,
+      "offset": 7013,
       "length": 9,
       "value": "\"referer\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6835,
+      "offset": 7085,
       "length": 9,
       "value": "\"profile\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6871,
+      "offset": 7121,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6914,
+      "offset": 7164,
       "length": 15,
       "value": "\"interactionId\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6964,
+      "offset": 7214,
       "length": 13,
       "value": "\"eventSource\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7008,
+      "offset": 7258,
       "length": 9,
       "value": "\"eventId\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7049,
+      "offset": 7299,
       "length": 11,
       "value": "\"timestamp\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7087,
+      "offset": 7337,
       "length": 6,
       "value": "\"data\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 7185,
+      "offset": 7435,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 7189,
+      "offset": 7439,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 7194,
+      "offset": 7444,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7239,
+      "offset": 7489,
       "length": 26,
       "value": "\"mobile_app_sessionlength\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7356,
+      "offset": 7606,
       "length": 15,
       "value": "\"mobile_app_id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7406,
+      "offset": 7656,
       "length": 17,
       "value": "\"mobile_app_name\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7466,
+      "offset": 7716,
       "length": 24,
       "value": "\"mobile_app_nameversion\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7523,
+      "offset": 7773,
       "length": 15,
       "value": "\"mobile_app_os\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7579,
+      "offset": 7829,
       "length": 22,
       "value": "\"mobile_app_osversion\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7638,
+      "offset": 7888,
       "length": 19,
       "value": "\"mobile_app_vendor\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7693,
+      "offset": 7943,
       "length": 18,
       "value": "\"mobile_app_model\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7752,
+      "offset": 8002,
       "length": 23,
       "value": "\"mobile_app_resolution\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7815,
+      "offset": 8065,
       "length": 22,
       "value": "\"mobile_app_pageviews\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7886,
+      "offset": 8136,
       "length": 20,
       "value": "\"CFBundleIdentifier\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7948,
+      "offset": 8198,
       "length": 21,
       "value": "\"CFBundleDisplayName\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8017,
+      "offset": 8267,
       "length": 14,
       "value": "\"CFBundleName\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8076,
+      "offset": 8326,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCache.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/BlueConicCache.swift",
       "kind": "BooleanLiteral",
       "offset": 296,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Logger.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/impl\/util\/Logger.swift",
       "kind": "BooleanLiteral",
       "offset": 209,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/ListenerUtil.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/Util\/ListenerUtil.swift",
       "kind": "BooleanLiteral",
       "offset": 7444,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/RecommendationsDialogue.swift",
+      "kind": "StringLiteral",
+      "offset": 260,
+      "length": 29,
+      "value": "\"BC_RECOMMENDATIONS_DIALOGUE\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/RecommendationsDialogue.swift",
+      "kind": "StringLiteral",
+      "offset": 399,
+      "length": 7,
+      "value": "\"rules\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/RecommendationsDialogue.swift",
+      "kind": "Array",
+      "offset": 437,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/RecommendationsDialogue.swift",
+      "kind": "IntegerLiteral",
+      "offset": 536,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/RecommendationsDialogue.swift",
+      "kind": "IntegerLiteral",
+      "offset": 572,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/RecommendationsDialogue.swift",
+      "kind": "IntegerLiteral",
+      "offset": 609,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/RecommendationsDialogue.swift",
+      "kind": "BooleanLiteral",
+      "offset": 654,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "kind": "StringLiteral",
+      "offset": 263,
+      "length": 20,
+      "value": "\"BC_GLOBAL_LISTENER\""
+    },
+    {
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "Dictionary",
-      "offset": 368,
+      "offset": 415,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 588,
+      "offset": 635,
       "length": 12,
       "value": "\"mobile_app\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 641,
+      "offset": 688,
       "length": 12,
       "value": "\"connection\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 687,
+      "offset": 734,
       "length": 5,
       "value": "\"web\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 733,
+      "offset": 780,
       "length": 12,
       "value": "\"mobile_web\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 781,
+      "offset": 828,
       "length": 7,
       "value": "\"Apple\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 1016,
+      "offset": 1063,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 1021,
+      "offset": 1068,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "IntegerLiteral",
-      "offset": 1026,
+      "offset": 1073,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1089,
+      "offset": 1136,
       "length": 3,
       "value": "\"s\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1177,
+      "offset": 1224,
       "length": 15,
       "value": "\"currentosname\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1229,
+      "offset": 1276,
       "length": 8,
       "value": "\"osname\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1285,
+      "offset": 1332,
       "length": 18,
       "value": "\"currentosversion\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1343,
+      "offset": 1390,
       "length": 11,
       "value": "\"osversion\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1403,
+      "offset": 1450,
       "length": 19,
       "value": "\"currentresolution\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1473,
+      "offset": 1520,
       "length": 20,
       "value": "\"currentscreenwidth\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1545,
+      "offset": 1592,
       "length": 21,
       "value": "\"currentscreenheight\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1607,
+      "offset": 1654,
       "length": 12,
       "value": "\"resolution\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1658,
+      "offset": 1705,
       "length": 10,
       "value": "\"language\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1736,
+      "offset": 1783,
       "length": 8,
       "value": "\"visits\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1827,
+      "offset": 1874,
       "length": 13,
       "value": "\"visitclicks\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1914,
+      "offset": 1961,
       "length": 12,
       "value": "\"clickcount\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 1972,
+      "offset": 2019,
       "length": 15,
       "value": "\"lastvisitdate\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2106,
+      "offset": 2153,
       "length": 15,
       "value": "\"mobile_app_id\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2160,
+      "offset": 2207,
       "length": 17,
       "value": "\"mobile_app_name\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2224,
+      "offset": 2271,
       "length": 24,
       "value": "\"mobile_app_nameversion\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2289,
+      "offset": 2336,
       "length": 19,
       "value": "\"mobile_app_vendor\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2348,
+      "offset": 2395,
       "length": 18,
       "value": "\"mobile_app_model\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 2404,
+      "offset": 2451,
       "length": 16,
       "value": "\"mobile_app_dpi\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3335,
+      "offset": 3382,
       "length": 13,
       "value": "\"origin_type\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3392,
+      "offset": 3439,
       "length": 15,
       "value": "\"origin_source\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3451,
+      "offset": 3498,
       "length": 15,
       "value": "\"origin_detail\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3563,
+      "offset": 3610,
       "length": 12,
       "value": "\"devicetype\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3618,
+      "offset": 3665,
       "length": 14,
       "value": "\"visitedsites\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3672,
+      "offset": 3719,
       "length": 11,
       "value": "\"entrypage\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3734,
+      "offset": 3781,
       "length": 22,
       "value": "\"received_from_system\""
     },
     {
-      "filePath": "\/Users\/sebastian.vasile\/Work\/iOS\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
+      "filePath": "\/Users\/andi.beqiri\/workspace\/ios\/BlueConicClient\/BlueConicClient\/Plugins\/GlobalListener.swift",
       "kind": "StringLiteral",
-      "offset": 3811,
+      "offset": 3858,
       "length": 26,
       "value": "\"received_from_connection\""
     }

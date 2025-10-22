@@ -6,15 +6,15 @@
 	<dict>
 		<key>BlueConicClient.podspec</key>
 		<data>
-		cLFIWJl97EIn//4hUCuNlDnZMIo=
+		1H9pXZUKnSP2vhgNm0enLxrcCBw=
 		</data>
 		<key>Headers/BlueConicClient-Swift.h</key>
 		<data>
-		V6vYShtu9I3o7q4GdVW5E2+zweU=
+		ZvX91WFyaX7WhbbqVb+ntEaEzM0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		h0/yEKdYOunTLT7CU4K+XSnfHxE=
+		X6OYHK1vrg1NtDGRXd3kW/9S9mk=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -22,43 +22,43 @@
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.abi.json</key>
 		<data>
-		7m/egcye65MJsX4Zrg6rAsbPLLM=
+		gcwBsH4BgyFY4sVtNt+/xOKS3vY=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.private.swiftinterface</key>
 		<data>
-		v71brxInlYWcvIyTXc4c/FMnzLI=
+		x5/DFzB3Gtih4DFa5rh9hmlWwdo=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		9s9fkEjJ1HLsQqIR+vAcHVzAjpY=
+		GIyuAe9DUQboOVKB2Z/JLg5Hu8g=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.swiftinterface</key>
 		<data>
-		v71brxInlYWcvIyTXc4c/FMnzLI=
+		x5/DFzB3Gtih4DFa5rh9hmlWwdo=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		MpBg6fkDcMNcIQnbMI3+yIzCXlM=
+		dNE0TICf1DHrCgMClBzZfob5vxI=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
 		<data>
-		7m/egcye65MJsX4Zrg6rAsbPLLM=
+		gcwBsH4BgyFY4sVtNt+/xOKS3vY=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.private.swiftinterface</key>
 		<data>
-		XvHna+raHlWAQvZiNMhgGsOUgeI=
+		leKfnSFZdVRo+GYNID1HOR4mM4E=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		YD6bBA8Jf04o/OZLng44n+BxpUs=
+		pRtc55GXTa0iREmXMJyodfNHK24=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.swiftinterface</key>
 		<data>
-		XvHna+raHlWAQvZiNMhgGsOUgeI=
+		leKfnSFZdVRo+GYNID1HOR4mM4E=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		TSxsxRU605FTykR+s2aiRnghw/s=
+		1mEo7O9ySgE72nPyUwhcoSTUVw4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -95,14 +95,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vuPnrMefsU6nbh2qC4mrdJId+A4qHiCH7eXO9EFn82w=
+			kXmZ2OVnDCPt7qPv8RpP7cWt3yqJhvo/Ndw6s7EG8/4=
 			</data>
 		</dict>
 		<key>Headers/BlueConicClient-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5ndhGQIaw92LBposoVh28bu5iQhjez2jvbkNL+F2EkI=
+			fn/4llZ6IfgnvHISNwTex5ho5XyRfKElntYIoO5iNUk=
 			</data>
 		</dict>
 		<key>LICENSE</key>
@@ -116,70 +116,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FfDNw7M1I7yd92KzV3uHR4Nzra6MiFHNQZTEF12BMBM=
+			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pTDWhvfDG1CIZVEtI4oxVMuIBAF5sVHlxwK+izC6q8Q=
+			m2pBbDgdEor0QCqQmpoyyl+UZ20wRComeNeRhI9IK2k=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QD3Zm//ikqtyl4uMT2iv2E6R1YcYIb8cwOfQCQiO2WM=
+			kuwQUY1Y9h3TvtrvI0Ep2g40Ns3+6lJKUx+wYxtdZ60=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pTDWhvfDG1CIZVEtI4oxVMuIBAF5sVHlxwK+izC6q8Q=
+			m2pBbDgdEor0QCqQmpoyyl+UZ20wRComeNeRhI9IK2k=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r7xFKVVsCwnqhaxncpMS5S0maT9w+LtGMU3O8Se9BaE=
+			onc/HQL9iYyCoLVaN/2zGdgiQ2DgKPXvGAGwoQp0BUw=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FfDNw7M1I7yd92KzV3uHR4Nzra6MiFHNQZTEF12BMBM=
+			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wOoDDB6bJMJTT3KBqfak9oTHzH3XjoCEG3RsLOTt8aE=
+			GxWHaNVY8F+OHvrfbX+6OVoGVZ+92zYwqP2NZ1Ln0as=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mYoN1Vsni3neF+g+uft+4wt/E05FWaNUKiAya2vsfXg=
+			VvgqYhdKZv3KXZvSTWb3EDAB7cS1Wy8fI3Wi/1Q0xY8=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wOoDDB6bJMJTT3KBqfak9oTHzH3XjoCEG3RsLOTt8aE=
+			GxWHaNVY8F+OHvrfbX+6OVoGVZ+92zYwqP2NZ1Ln0as=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			61rOinc/fEjGyd0o2JHfZoDCsc+Q69dozNOtQOpc/Do=
+			BZ1OCxRqmyA0zcx7GmQrf1tHYxz1gWD1bCU/NzhCCgg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

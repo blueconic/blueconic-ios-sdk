@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.1.1] 2025-10-21
+### Changed
+- Added a safeguard when accessing the profile before the SDK is initialized.
+### Fixed
+- Fixed an issue with concurrent read/write in some causing EXC_BAD_ACCESS crash.
 
 ## [5.1.0] 2025-10-05
 ### Added

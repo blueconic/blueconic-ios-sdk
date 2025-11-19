@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import CoreLocation
 import Foundation
 import Swift
 import SystemConfiguration
@@ -57,6 +58,7 @@ import _SwiftConcurrencyShims
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class BlueConicReachability {
@@ -97,11 +99,13 @@ import _SwiftConcurrencyShims
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class FullscreenLightbox : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class BCLightbox : ObjectiveC.NSObject, WebKit.WKNavigationDelegate {
@@ -145,7 +149,7 @@ import _SwiftConcurrencyShims
   public var shared: Swift.Bool
   public var simulatorUsername: Swift.String
   public var simulatorMobileSessionId: Swift.String
-  @_inheritsConvenienceInitializers @objc(BlueConicConfigurationBuilder) public class Builder : ObjectiveC.NSObject {
+  @objc @_inheritsConvenienceInitializers @objcMembers public class Builder : ObjectiveC.NSObject {
     @objc override dynamic public init()
     @objc public func setHostName(_ hostName: Swift.String) -> BlueConicClient.BlueConicConfiguration.Builder
     @objc public func setOverrideAppId(_ appID: Swift.String) -> BlueConicClient.BlueConicConfiguration.Builder
@@ -259,7 +263,7 @@ import _SwiftConcurrencyShims
     @objc get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc public var context: [Swift.String]? {
+  @objc public var contextList: [Swift.String]? {
     @objc get
   }
   #endif
@@ -271,6 +275,7 @@ import _SwiftConcurrencyShims
 @_hasMissingDesignatedInitializers public class PreferredHourListener : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RuleService : BlueConicClient.EventSerivceBase {
@@ -308,6 +313,14 @@ import _SwiftConcurrencyShims
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
+  @objc deinit
+}
+public class GeofencingListener : BlueConicClient.BlueConicPlugin {
+  @objc required public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FormListeningService : BlueConicClient.EventSerivceBase {
@@ -330,9 +343,14 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class Event : ObjectiveC.NSObject {
-  @objc public var name: Swift.String {
+  @objc open var name: Swift.String {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public var context: [Swift.String : Any]? {
+    @objc get
+  }
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public var location: Swift.String? {
     @objc get
@@ -375,6 +393,7 @@ public enum OperationType : Swift.String {
   @objc init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc func onLoad()
   @objc optional func onDestroy()
+  @objc func getPreloadProperties() -> [Swift.String]
 }
 @objc public class UpdateValuesEvent : BlueConicClient.Event {
   @objc public var values: [Swift.String] {
@@ -918,12 +937,14 @@ extension BlueConicClient.JSON : Swift.Codable {
   public func migrateToV2(rules: [Any]) -> [Any]?
   #endif
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class BehaviorListener : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 extension Swift.KeyedEncodingContainer {
@@ -937,13 +958,14 @@ extension Swift.KeyedDecodingContainer {
 @_hasMissingDesignatedInitializers public class PropertiesBasedDialogue : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc public func onDestroy()
   @objc deinit
 }
 @objc public class AdvancedEvent : BlueConicClient.Event {
   @objc public var eventName: Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc public var context: [Swift.String]? {
+  @objc public var contextList: [Swift.String]? {
     @objc get
   }
   #endif
@@ -996,6 +1018,7 @@ extension Swift.KeyedDecodingContainer {
 @_hasMissingDesignatedInitializers public class RecommendationsDialogue : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc public func onDestroy()
   @objc deinit
 }
@@ -1013,6 +1036,7 @@ extension Swift.KeyedDecodingContainer {
   #endif
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 extension BlueConicClient.BlueConicEventManager.EventName : Swift.Equatable {}

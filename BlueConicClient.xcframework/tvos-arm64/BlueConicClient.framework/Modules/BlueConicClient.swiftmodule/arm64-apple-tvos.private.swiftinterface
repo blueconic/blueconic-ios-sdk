@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
-// swift-module-flags: -target arm64-apple-tvos26.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target arm64-apple-tvos26.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+import CoreLocation
 import Foundation
 import Swift
 import SystemConfiguration
@@ -26,18 +27,23 @@ import _SwiftConcurrencyShims
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishAdvancedEvent(eventName: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func publishAdvancedEventAsync(eventName: Swift.String, context: [Swift.String] = []) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishClickEvent(selector: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func publishClickEventAsync(selector: Swift.String, context: [Swift.String] = []) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishFormSubmitEvent(selector: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func publishFormSubmitEventAsync(selector: Swift.String, context: [Swift.String] = []) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishUpdateContentEvent(selector: Swift.String, content: Swift.String = "", callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func publishUpdateContentEventAsync(selector: Swift.String, content: Swift.String = "") async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishUpdateValuesEvent(selector: Swift.String, values: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func publishUpdateValuesEventAsync(selector: Swift.String, values: [Swift.String] = []) async -> BlueConicClient.BCResult
   public enum EventName : Swift.String {
     case propertiesDialogue
     case recommendationsDialogue
@@ -56,6 +62,7 @@ import _SwiftConcurrencyShims
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class BlueConicReachability {
@@ -96,6 +103,7 @@ import _SwiftConcurrencyShims
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class BlueConicConfiguration : ObjectiveC.NSObject {
@@ -105,7 +113,7 @@ import _SwiftConcurrencyShims
   public var shared: Swift.Bool
   public var simulatorUsername: Swift.String
   public var simulatorMobileSessionId: Swift.String
-  @_inheritsConvenienceInitializers @objc(BlueConicConfigurationBuilder) public class Builder : ObjectiveC.NSObject {
+  @objc @_inheritsConvenienceInitializers @objcMembers public class Builder : ObjectiveC.NSObject {
     @objc override dynamic public init()
     @objc public func setHostName(_ hostName: Swift.String) -> BlueConicClient.BlueConicConfiguration.Builder
     @objc public func setOverrideAppId(_ appID: Swift.String) -> BlueConicClient.BlueConicConfiguration.Builder
@@ -130,6 +138,7 @@ import _SwiftConcurrencyShims
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func initialize(_ configuration: BlueConicClient.BlueConicConfiguration, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func initializeAsync(_ configuration: BlueConicClient.BlueConicConfiguration) async -> BlueConicClient.BCResult
   @objc public func getConfiguration() -> BlueConicClient.BlueConicConfiguration
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setContext(_ context: UIKit.UIViewController?)
@@ -138,12 +147,15 @@ import _SwiftConcurrencyShims
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func createProfileAsync() async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func deleteProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func deleteProfileAsync() async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func updateProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func updateProfileAsync() async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getViewController() -> UIKit.UIViewController?
   #endif
@@ -154,6 +166,9 @@ import _SwiftConcurrencyShims
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setMobileAdId(_ mobileAdId: Swift.String?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setMobileAdIdAsync(_ mobileAdId: Swift.String?) async -> BlueConicClient.BCResult
+  #endif
   @objc public func setEnabled(_ isEnabled: Swift.Bool)
   @objc public func isEnabled() -> Swift.Bool
   @objc public func setLocale(_ locale: Swift.String)
@@ -162,20 +177,27 @@ import _SwiftConcurrencyShims
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createPageViewEvent(screenName: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func createPageViewEventAsync(screenName: Swift.String, properties: [Swift.String : Any] = [:]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createViewEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func createViewEventAsync(interactionId: Swift.String, properties: [Swift.String : Any] = [:]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createConversionEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func createConversionEventAsync(interactionId: Swift.String, properties: [Swift.String : Any] = [:]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createClickEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func createClickEventAsync(interactionId: Swift.String, properties: [Swift.String : Any] = [:]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEvent(_ eventType: Swift.String, data: [Swift.String : Any]?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEvent(_ eventType: Swift.String, data: [Swift.String : Any]?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func createEventAsync(_ eventType: Swift.String, data: [Swift.String : Any]?) async -> BlueConicClient.BCResult
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?)
@@ -184,14 +206,20 @@ import _SwiftConcurrencyShims
   @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func createEventAsync(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?) async -> BlueConicClient.BCResult
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createTimelineEvent(_ eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func createTimelineEventAsync(_ eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createTimelineEventById(_ eventId: Swift.String, eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func createTimelineEventByIdAsync(_ eventId: Swift.String, eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createRecommendationEvent(storeId: Swift.String, action: Swift.String, itemIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)?)
   #endif
+  @objc public func createRecommendationEventAsync(storeId: Swift.String, action: Swift.String, itemIds: [Swift.String]) async -> BlueConicClient.BCResult
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass)
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass, className: Swift.String)
   @objc public func getSegments() -> [BlueConicClient.BlueConicSegment]
@@ -219,7 +247,7 @@ import _SwiftConcurrencyShims
     @objc get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc public var context: [Swift.String]? {
+  @objc public var contextList: [Swift.String]? {
     @objc get
   }
   #endif
@@ -231,6 +259,7 @@ import _SwiftConcurrencyShims
 @_hasMissingDesignatedInitializers public class PreferredHourListener : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RuleService : BlueConicClient.EventSerivceBase {
@@ -268,6 +297,14 @@ import _SwiftConcurrencyShims
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
+  @objc deinit
+}
+public class GeofencingListener : BlueConicClient.BlueConicPlugin {
+  @objc required public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class Connection : ObjectiveC.NSObject {
@@ -276,9 +313,14 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class Event : ObjectiveC.NSObject {
-  @objc public var name: Swift.String {
+  @objc open var name: Swift.String {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public var context: [Swift.String : Any]? {
+    @objc get
+  }
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public var location: Swift.String? {
     @objc get
@@ -317,10 +359,23 @@ public enum OperationType : Swift.String {
     get
   }
 }
+@objc public class BCResult : ObjectiveC.NSObject {
+  @objc final public let success: Swift.Bool
+  @objc final public let error: BlueConicClient.BCError?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(success: Swift.Bool, error: BlueConicClient.BCError? = nil)
+  #endif
+  @discardableResult
+  @objc public func onSuccess(_ closure: @escaping () -> Swift.Void) -> BlueConicClient.BCResult
+  @discardableResult
+  @objc public func onFailure(_ closure: @escaping (BlueConicClient.BCError) -> Swift.Void) -> BlueConicClient.BCResult
+  @objc deinit
+}
 @objc public protocol BlueConicPlugin {
   @objc init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc func onLoad()
   @objc optional func onDestroy()
+  @objc func getPreloadProperties() -> [Swift.String]
 }
 @objc public class UpdateValuesEvent : BlueConicClient.Event {
   @objc public var values: [Swift.String] {
@@ -786,15 +841,19 @@ extension BlueConicClient.JSON : Swift.Codable {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func addConsentedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func addConsentedObjectiveAsync(_ objectiveId: Swift.String) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func addRefusedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func addRefusedObjectiveAsync(_ objectiveId: Swift.String) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setConsentedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func setConsentedObjectivesAsync(_ objectiveIds: [Swift.String]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setRefusedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  @objc public func setRefusedObjectivesAsync(_ objectiveIds: [Swift.String]) async -> BlueConicClient.BCResult
   public func getAllProperties() -> [Swift.String : [Swift.String]]
   public func getValue(_ property: Swift.String) -> Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
@@ -803,18 +862,23 @@ extension BlueConicClient.JSON : Swift.Codable {
   #if compiler(>=5.3) && $NonescapableTypes
   public func addValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  public func addValueAsync(_ property: Swift.String, value: Swift.String) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   public func addValues(_ property: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  public func addValuesAsync(_ property: Swift.String, values: [Swift.String]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   public func setValue(_ name: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  public func setValueAsync(_ name: Swift.String, value: Swift.String) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   public func setValues(_ name: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  public func setValuesAsync(_ name: Swift.String, values: [Swift.String]) async -> BlueConicClient.BCResult
   #if compiler(>=5.3) && $NonescapableTypes
   public func incrementValue(_ property: Swift.String, value: Swift.Int, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   #endif
+  public func incrementValueAsync(_ property: Swift.String, value: Swift.Int) async -> BlueConicClient.BCResult
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class InteractionContext : ObjectiveC.NSObject {
@@ -864,12 +928,14 @@ extension BlueConicClient.JSON : Swift.Codable {
   public func migrateToV2(rules: [Any]) -> [Any]?
   #endif
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class BehaviorListener : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 extension Swift.KeyedEncodingContainer {
@@ -883,13 +949,14 @@ extension Swift.KeyedDecodingContainer {
 @_hasMissingDesignatedInitializers public class PropertiesBasedDialogue : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc public func onDestroy()
   @objc deinit
 }
 @objc public class AdvancedEvent : BlueConicClient.Event {
   @objc public var eventName: Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc public var context: [Swift.String]? {
+  @objc public var contextList: [Swift.String]? {
     @objc get
   }
   #endif
@@ -942,6 +1009,7 @@ extension Swift.KeyedDecodingContainer {
 @_hasMissingDesignatedInitializers public class RecommendationsDialogue : BlueConicClient.BlueConicPlugin {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc public func onDestroy()
   @objc deinit
 }
@@ -959,6 +1027,7 @@ extension Swift.KeyedDecodingContainer {
   #endif
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
+  @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
 extension BlueConicClient.BlueConicEventManager.EventName : Swift.Equatable {}

@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.2.0] 2026-01-21
+
+### Added
+- Added Geofencing plugin support.
+- Added async/await support as option for a majority of SDK operations.
+
+### Changed
+- Optimized profile synchronization in regards to properties and plugins.
+
 ## [5.1.1] 2025-10-21
 
 ### Changed

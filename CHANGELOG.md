@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.2.1] 2026-06-18
+
+### Fixed
+- Fixed issue with Profile setValue(s) not allowing empty values.
+
 ## [5.2.0] 2026-01-21
 
 ### Added

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target x86_64-apple-tvos26.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-tvos26.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
 import CoreLocation
 import Foundation
 import Swift
@@ -12,44 +12,28 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @objc public class BlueConicEventManager : ObjectiveC.NSObject {
   @objc public class func getInstance() -> BlueConicClient.BlueConicEventManager
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publish(_ event: BlueConicClient.Event, callback: ((BlueConicClient.Callback) -> Swift.Void)?)
-  #endif
   @objc public func subscribe(_ eventName: Swift.String, callbackObject: any BlueConicClient.EventHandler, onlyOnce: Swift.Bool = false, identifier: Swift.String = UUID().uuidString)
   public func subscribe(_ eventName: BlueConicClient.BlueConicEventManager.EventName, callbackObject: any BlueConicClient.EventHandler, onlyOnce: Swift.Bool = false, identifier: Swift.String = UUID().uuidString)
   public func unsubscribe(identifier: Swift.String)
   @objc public func clearEvents()
   @objc public func handleAllEvents()
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func clearEventHandlers(_ key: Swift.String?)
-  #endif
   @objc public func cleanup()
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishAdvancedEvent(eventName: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func publishAdvancedEventAsync(eventName: Swift.String, context: [Swift.String] = []) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishClickEvent(selector: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func publishClickEventAsync(selector: Swift.String, context: [Swift.String] = []) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishFormSubmitEvent(selector: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func publishFormSubmitEventAsync(selector: Swift.String, context: [Swift.String] = []) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishUpdateContentEvent(selector: Swift.String, content: Swift.String = "", callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func publishUpdateContentEventAsync(selector: Swift.String, content: Swift.String = "") async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func publishUpdateValuesEvent(selector: Swift.String, values: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func publishUpdateValuesEventAsync(selector: Swift.String, values: [Swift.String] = []) async -> BlueConicClient.BCResult
   public enum EventName : Swift.String {
     case propertiesDialogue
     case recommendationsDialogue
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
-    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -131,94 +115,48 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class BlueConic : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public class func getInstance(_ context: UIKit.UIViewController?) -> BlueConicClient.BlueConic
-  #endif
   @objc public class func getInstance() -> BlueConicClient.BlueConic
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func initialize(_ configuration: BlueConicClient.BlueConicConfiguration, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func initializeAsync(_ configuration: BlueConicClient.BlueConicConfiguration) async -> BlueConicClient.BCResult
   @objc public func getConfiguration() -> BlueConicClient.BlueConicConfiguration
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setContext(_ context: UIKit.UIViewController?)
-  #endif
   @objc public func getProfile() -> BlueConicClient.Profile
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func createProfileAsync() async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func deleteProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func deleteProfileAsync() async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func updateProfile(_ callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func updateProfileAsync() async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getViewController() -> UIKit.UIViewController?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getView(_ selector: Swift.String) -> UIKit.UIView?
-  #endif
   @objc public func getScreenName() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setMobileAdId(_ mobileAdId: Swift.String?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setMobileAdIdAsync(_ mobileAdId: Swift.String?) async -> BlueConicClient.BCResult
-  #endif
   @objc public func setEnabled(_ isEnabled: Swift.Bool)
   @objc public func isEnabled() -> Swift.Bool
   @objc public func setLocale(_ locale: Swift.String)
   @objc public func setURL(_ url: Foundation.URL)
   @objc public func getEventManager() -> BlueConicClient.BlueConicEventManager
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createPageViewEvent(screenName: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func createPageViewEventAsync(screenName: Swift.String, properties: [Swift.String : Any] = [:]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createViewEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func createViewEventAsync(interactionId: Swift.String, properties: [Swift.String : Any] = [:]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createConversionEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func createConversionEventAsync(interactionId: Swift.String, properties: [Swift.String : Any] = [:]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createClickEvent(interactionId: Swift.String, properties: [Swift.String : Any] = [:], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func createClickEventAsync(interactionId: Swift.String, properties: [Swift.String : Any] = [:]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEvent(_ eventType: Swift.String, data: [Swift.String : Any]?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEvent(_ eventType: Swift.String, data: [Swift.String : Any]?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEventAsync(_ eventType: Swift.String, data: [Swift.String : Any]?) async -> BlueConicClient.BCResult
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEvent(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createEventAsync(_ eventType: Swift.String, properties: [Swift.String : Swift.String]?) async -> BlueConicClient.BCResult
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createTimelineEvent(_ eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func createTimelineEventAsync(_ eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createTimelineEventById(_ eventId: Swift.String, eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func createTimelineEventByIdAsync(_ eventId: Swift.String, eventType: Swift.String, eventDate: Foundation.Date, properties: [Swift.String : Any]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createRecommendationEvent(storeId: Swift.String, action: Swift.String, itemIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)?)
-  #endif
   @objc public func createRecommendationEventAsync(storeId: Swift.String, action: Swift.String, itemIds: [Swift.String]) async -> BlueConicClient.BCResult
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass)
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass, className: Swift.String)
@@ -246,11 +184,9 @@ import _SwiftConcurrencyShims
   @objc public var selector: Swift.String {
     @objc get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var contextList: [Swift.String]? {
     @objc get
   }
-  #endif
   @objc public init(selector: Swift.String)
   @objc public init(selector: Swift.String, context: [Swift.String])
   @objc override public func message() -> Swift.String
@@ -316,17 +252,13 @@ public class GeofencingListener : BlueConicClient.BlueConicPlugin {
   @objc open var name: Swift.String {
     @objc get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var context: [Swift.String : Any]? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var location: Swift.String? {
     @objc get
     @objc set(newLocation)
   }
-  #endif
   @objc public var handledBy: [Swift.String] {
     @objc get
   }
@@ -339,9 +271,7 @@ public enum EventType : Swift.String {
   case CLICK
   case VIEW
   case CONVERSION
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -351,9 +281,7 @@ public enum OperationType : Swift.String {
   case ADD
   case SET
   case INCREMENT
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -362,9 +290,7 @@ public enum OperationType : Swift.String {
 @objc public class BCResult : ObjectiveC.NSObject {
   @objc final public let success: Swift.Bool
   @objc final public let error: BlueConicClient.BCError?
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(success: Swift.Bool, error: BlueConicClient.BCError? = nil)
-  #endif
   @discardableResult
   @objc public func onSuccess(_ closure: @escaping () -> Swift.Void) -> BlueConicClient.BCResult
   @discardableResult
@@ -395,9 +321,7 @@ public enum SwiftyJSONError : Swift.Int, Swift.Error {
   case wrongType
   case notExist
   case invalidJSON
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -422,9 +346,7 @@ public enum Type : Swift.Int {
   case dictionary
   case null
   case unknown
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -537,19 +459,13 @@ extension BlueConicClient.JSON : Swift.ExpressibleByArrayLiteral {
   public typealias ArrayLiteralElement = Any
 }
 extension BlueConicClient.JSON : Swift.RawRepresentable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Any)
-  #endif
   public var rawValue: Any {
     get
   }
   public func rawData(options opt: Foundation.JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Foundation.Data
-  #if compiler(>=5.3) && $NonescapableTypes
   public func rawString(_ encoding: Swift.String.Encoding = .utf8, options opt: Foundation.JSONSerialization.WritingOptions = .prettyPrinted) -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func rawString(_ options: [BlueConicClient.writingOptionsKeys : Any]) -> Swift.String?
-  #endif
   public typealias RawValue = Any
 }
 extension BlueConicClient.JSON : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
@@ -561,207 +477,165 @@ extension BlueConicClient.JSON : Swift.CustomStringConvertible, Swift.CustomDebu
   }
 }
 extension BlueConicClient.JSON {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var array: [BlueConicClient.JSON]? {
     get
   }
-  #endif
   public var arrayValue: [BlueConicClient.JSON] {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var arrayObject: [Any]? {
     get
     set
   }
-  #endif
 }
 extension BlueConicClient.JSON {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var dictionary: [Swift.String : BlueConicClient.JSON]? {
     get
   }
-  #endif
   public var dictionaryValue: [Swift.String : BlueConicClient.JSON] {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var dictionaryObject: [Swift.String : Any]? {
     get
     set
   }
-  #endif
 }
 extension BlueConicClient.JSON {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var bool: Swift.Bool? {
     get
     set
   }
-  #endif
   public var boolValue: Swift.Bool {
     get
     set
   }
 }
 extension BlueConicClient.JSON {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var string: Swift.String? {
     get
     set
   }
-  #endif
   public var stringValue: Swift.String {
     get
     set
   }
 }
 extension BlueConicClient.JSON {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var number: Foundation.NSNumber? {
     get
     set
   }
-  #endif
   public var numberValue: Foundation.NSNumber {
     get
     set
   }
 }
 extension BlueConicClient.JSON {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var null: Foundation.NSNull? {
     get
     set
   }
-  #endif
   public func exists() -> Swift.Bool
 }
 extension BlueConicClient.JSON {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var url: Foundation.URL? {
     get
     set
   }
-  #endif
 }
 extension BlueConicClient.JSON {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var double: Swift.Double? {
     get
     set
   }
-  #endif
   public var doubleValue: Swift.Double {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var float: Swift.Float? {
     get
     set
   }
-  #endif
   public var floatValue: Swift.Float {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var int: Swift.Int? {
     get
     set
   }
-  #endif
   public var intValue: Swift.Int {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var uInt: Swift.UInt? {
     get
     set
   }
-  #endif
   public var uIntValue: Swift.UInt {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var int8: Swift.Int8? {
     get
     set
   }
-  #endif
   public var int8Value: Swift.Int8 {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var uInt8: Swift.UInt8? {
     get
     set
   }
-  #endif
   public var uInt8Value: Swift.UInt8 {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var int16: Swift.Int16? {
     get
     set
   }
-  #endif
   public var int16Value: Swift.Int16 {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var uInt16: Swift.UInt16? {
     get
     set
   }
-  #endif
   public var uInt16Value: Swift.UInt16 {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var int32: Swift.Int32? {
     get
     set
   }
-  #endif
   public var int32Value: Swift.Int32 {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var uInt32: Swift.UInt32? {
     get
     set
   }
-  #endif
   public var uInt32Value: Swift.UInt32 {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var int64: Swift.Int64? {
     get
     set
   }
-  #endif
   public var int64Value: Swift.Int64 {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var uInt64: Swift.UInt64? {
     get
     set
   }
-  #endif
   public var uInt64Value: Swift.UInt64 {
     get
     set
@@ -801,9 +675,7 @@ extension BlueConicClient.JSON : Swift.Codable {
   case interactionRetrievalError
   case invalidParameters
   case internalError
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -813,120 +685,60 @@ extension BlueConicClient.JSON : Swift.Codable {
   @objc final public let type: BlueConicClient.ErrorType
   @objc final public let nsError: Foundation.NSError
   @objc final public let message: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(type: BlueConicClient.ErrorType, nsError: Foundation.NSError, message: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func withType(_ type: BlueConicClient.ErrorType, message: Swift.String? = nil) -> BlueConicClient.BCError
-  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class Profile : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getId() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getDomainGroup() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getPrivacyLegislation() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getConsentedObjectives() -> [Swift.String]?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getRefusedObjectives() -> [Swift.String]?
-  #endif
   @objc public func setPrivacyLegislation(_ legislation: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func addConsentedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func addConsentedObjectiveAsync(_ objectiveId: Swift.String) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func addRefusedObjective(_ objectiveId: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func addRefusedObjectiveAsync(_ objectiveId: Swift.String) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setConsentedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func setConsentedObjectivesAsync(_ objectiveIds: [Swift.String]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setRefusedObjectives(_ objectiveIds: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   @objc public func setRefusedObjectivesAsync(_ objectiveIds: [Swift.String]) async -> BlueConicClient.BCResult
   public func getAllProperties() -> [Swift.String : [Swift.String]]
   public func getValue(_ property: Swift.String) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getValues(_ property: Swift.String) -> [Swift.String]?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func addValue(_ property: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   public func addValueAsync(_ property: Swift.String, value: Swift.String) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   public func addValues(_ property: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   public func addValuesAsync(_ property: Swift.String, values: [Swift.String]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setValue(_ name: Swift.String, value: Swift.String, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   public func setValueAsync(_ name: Swift.String, value: Swift.String) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setValues(_ name: Swift.String, values: [Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   public func setValuesAsync(_ name: Swift.String, values: [Swift.String]) async -> BlueConicClient.BCResult
-  #if compiler(>=5.3) && $NonescapableTypes
   public func incrementValue(_ property: Swift.String, value: Swift.Int, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
-  #endif
   public func incrementValueAsync(_ property: Swift.String, value: Swift.Int) async -> BlueConicClient.BCResult
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class InteractionContext : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getInteractionId() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getInteractionName() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getInteractionTypeId() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getPluginType() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getDialogueId() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getDialogueName() -> Swift.String?
-  #endif
   @objc public func getParameters() -> [Swift.String : [Swift.String]]
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getConnection(_ id: Swift.String) -> BlueConicClient.Connection?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getView() -> UIKit.UIView?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getPositionIdentifier() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getPositionName() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getValueFromParameters(key: Swift.String) -> Swift.String?
-  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class FormListener : BlueConicClient.BlueConicPlugin {
   @objc convenience required public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
-  #if compiler(>=5.3) && $NonescapableTypes
   public func migrate() -> [Any]?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func migrateToV2(rules: [Any]) -> [Any]?
-  #endif
   @objc public func onDestroy()
   @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
@@ -955,11 +767,9 @@ extension Swift.KeyedDecodingContainer {
 }
 @objc public class AdvancedEvent : BlueConicClient.Event {
   @objc public var eventName: Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var contextList: [Swift.String]? {
     @objc get
   }
-  #endif
   @objc public init(eventName: Swift.String)
   @objc public init(eventName: Swift.String, context: [Swift.String])
   @objc override public func message() -> Swift.String
@@ -973,35 +783,17 @@ extension Swift.KeyedDecodingContainer {
 @_hasMissingDesignatedInitializers public class ListenerUtil {
   public class func contentContainsWord(_ rule: BlueConicClient.JSON, content: [Swift.String], interests: [Swift.String]) -> Swift.Bool
   public class func getWords(_ rule: BlueConicClient.JSON) -> [Swift.String]
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func getWords(_ words: [Swift.String]?) -> [Swift.String]
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func getContent(_ selector: Swift.String, context: [Swift.String]?) -> [Swift.String]
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func applyToSubViews(_ element: UIKit.UIView?, apply: (UIKit.UIView) -> Swift.String?) -> Swift.Set<Swift.String>
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func getSelector(_ contentArea: BlueConicClient.JSON?) -> Swift.String?
-  #endif
   public class func JSONStringify(_ value: Any, prettyPrinted: Swift.Bool = false) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func getProfilePropertyFromParameters(_ parameters: [Swift.String : [Swift.String]]) -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func getDictionaryFromParameters(_ context: BlueConicClient.InteractionContext?, key: Swift.String) -> [Swift.String : [Any]]?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func getArrayFromParameters(_ context: BlueConicClient.InteractionContext?, key: Swift.String) -> [[Swift.String : Any]]?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func getValueFromParameters(_ context: BlueConicClient.InteractionContext?, key: Swift.String) -> Swift.String
-  #endif
   public class func getValueFromDictionary(_ dictionary: [Swift.String : [Swift.String]], key: Swift.String) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public class func stringToJson(_ json: Swift.String) -> Any?
-  #endif
   public class func getCurrentTime() -> Swift.String
   public class func getCurrentDate() -> Swift.String
   @objc deinit
@@ -1019,12 +811,10 @@ extension Swift.KeyedDecodingContainer {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class GlobalListener : BlueConicClient.BlueConicPlugin {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var infoDictionary: [Swift.String : Any?] {
     get
     set
   }
-  #endif
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func getPreloadProperties() -> [Swift.String]

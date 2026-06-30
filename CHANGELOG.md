@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.2.2] 2026-07-01
+
+### Fixed
+- Additional fix for issue with Profile setValue(s) not allowing empty values with specific properties such as email.
+- Fixed issue with not having an exponential backoff when the SDK is not able to connect to the BlueConic server.
+
 ## [5.2.1] 2026-06-18
 
 ### Fixed

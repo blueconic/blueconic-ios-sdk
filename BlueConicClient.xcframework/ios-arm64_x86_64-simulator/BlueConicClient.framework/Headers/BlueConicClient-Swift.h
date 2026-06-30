@@ -968,6 +968,12 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// returns:
 /// All connections from the last pageview
 - (NSArray<BlueConicSegment *> * _Nonnull)getSegments SWIFT_WARN_UNUSED_RESULT;
+/// JSON string variant of <code>getSegments()</code>, for cross-platform plugins (e.g. React Native, Flutter).
+/// iOS SDK customers should use <code>getSegments()</code> instead.
+///
+/// returns:
+/// A JSON array string of the segments, or “[]” when there are none or serialization fails.
+- (NSString * _Nonnull)getSegmentsAsJson SWIFT_WARN_UNUSED_RESULT;
 /// Returns whether the profile falls into the segment.
 /// true when the profile is part of the segment, false when it is not part of it..
 /// It will retrieve the new segments when a new createEvent: “PAGEVIEW” is called.
@@ -2490,6 +2496,12 @@ SWIFT_CLASS("_TtC15BlueConicClient9BlueConic")
 /// returns:
 /// All connections from the last pageview
 - (NSArray<BlueConicSegment *> * _Nonnull)getSegments SWIFT_WARN_UNUSED_RESULT;
+/// JSON string variant of <code>getSegments()</code>, for cross-platform plugins (e.g. React Native, Flutter).
+/// iOS SDK customers should use <code>getSegments()</code> instead.
+///
+/// returns:
+/// A JSON array string of the segments, or “[]” when there are none or serialization fails.
+- (NSString * _Nonnull)getSegmentsAsJson SWIFT_WARN_UNUSED_RESULT;
 /// Returns whether the profile falls into the segment.
 /// true when the profile is part of the segment, false when it is not part of it..
 /// It will retrieve the new segments when a new createEvent: “PAGEVIEW” is called.

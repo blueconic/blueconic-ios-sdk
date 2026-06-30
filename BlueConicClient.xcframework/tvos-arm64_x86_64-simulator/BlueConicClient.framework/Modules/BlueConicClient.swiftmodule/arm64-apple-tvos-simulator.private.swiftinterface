@@ -161,6 +161,7 @@ import _SwiftConcurrencyShims
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass)
   @objc public func registerPluginClass(_ pluginClass: Swift.AnyClass, className: Swift.String)
   @objc public func getSegments() -> [BlueConicClient.BlueConicSegment]
+  @objc public func getSegmentsAsJson() -> Swift.String
   @objc public func hasSegment(_ segmentId: Swift.String) -> Swift.Bool
   @objc public class func setPlatformInformation(platformName: Swift.String, platformVersion: Swift.String)
   @objc deinit

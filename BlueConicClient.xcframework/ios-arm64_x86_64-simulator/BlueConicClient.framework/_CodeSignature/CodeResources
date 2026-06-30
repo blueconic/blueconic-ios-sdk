@@ -6,15 +6,15 @@
 	<dict>
 		<key>BlueConicClient.podspec</key>
 		<data>
-		ijfzrCm2mCry7jg2xiUH3A6W1jk=
+		ZgblR7UhXtUwOF0fjfOnPNlAecA=
 		</data>
 		<key>Headers/BlueConicClient-Swift.h</key>
 		<data>
-		1yMVpFTgjrPAvXMAr7sZ9hDgKcU=
+		acMexAo3YN66vQjLVZH5zTm/e9E=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KPJokZnvbGXXczwQGpXQxqoa92c=
+		u0hK2wVCHw7bWA+eGTeQBYKFoSc=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		oCr4fTFnw7nv4HAYBCr0T5yj7tg=
+		ajkXABUA32509Ns2n4FTcIGWO8s=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		RouKWnpbmOf2WlWL6nsxB12O/as=
+		z3SXJREbTfz5XI6mIFDIh2t95NI=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		oCr4fTFnw7nv4HAYBCr0T5yj7tg=
+		ajkXABUA32509Ns2n4FTcIGWO8s=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		R8BUZq3EDiz0lc/IC+gw/EcD6fc=
+		0qgGNlih/Mvj6HjLGUPKqmgW2sU=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -46,19 +46,19 @@
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ZCPprJ4kKwrHN8mxV2reYffODU4=
+		IwMxVfVXSZDKGn5W2qNRRjYzZTs=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		y4zAur9v/OVujANFJ9Ik7CRalAk=
+		NT9yfp+IDWgkOd50unIl8UbOmXE=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ZCPprJ4kKwrHN8mxV2reYffODU4=
+		IwMxVfVXSZDKGn5W2qNRRjYzZTs=
 		</data>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eP8d9D2JduXxN3+SOhKVgUsRjXM=
+		YMOVSu+KoCVgPW9IXFk0ggsdSes=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -95,14 +95,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jujoFzGR+alLerdN62w2f3y5P11T9ppqzSpz66Wsgks=
+			sOjiBJyTX7vaqdOaHNOqRcBomctO5qmLk+gL3Yjac74=
 			</data>
 		</dict>
 		<key>Headers/BlueConicClient-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WU6lqOaK3q/YoHldIsfhvAYGdIx13fgubDXDRhVNqg0=
+			Qcx6LIBnQmYzS1elXsapRjbTWc3DWMgmfJbkuunSpEc=
 			</data>
 		</dict>
 		<key>LICENSE</key>
@@ -123,28 +123,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+qgq/IZkJDYWNQ5bRwXPvfj8N0TCfuHTdL9nto92bWM=
+			+7BUW2up7CNsabXCF7v1g/xxKTFjezShjH7I1Q7Yvys=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FPRlBg4R0q995IPsGWBpSnIZebqV7Y7mEP2uzrVzw08=
+			YQXPJMlQLqEnYfqw1pBMReUxk2ZZVseV4O/pBdSJN+8=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+qgq/IZkJDYWNQ5bRwXPvfj8N0TCfuHTdL9nto92bWM=
+			+7BUW2up7CNsabXCF7v1g/xxKTFjezShjH7I1Q7Yvys=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r3JdtC3aLrSVuTi0cj5SAi3L01h3eNNLjSs3XliJJ7c=
+			QtgCbtOj6bBDNk/PUs/wyZ6CxWaGJkVYFos1mI0xH7c=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -158,28 +158,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i4t3jewp7XMMd+7KrghLtkVeS5qf2xgmInb9O0J//78=
+			oR1HBxfTU/nTDuxO5GB/oMY+OPrdkSxYotWyEPB9e5Y=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lb4zzov215TD5bzLiQPT/Sf6LMTJkAJEH+B/8kTmnjc=
+			P2LS2Ggcg5LKX1T6Nfj+5wGcGOp9GN+WtSk/EbiSZ4w=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i4t3jewp7XMMd+7KrghLtkVeS5qf2xgmInb9O0J//78=
+			oR1HBxfTU/nTDuxO5GB/oMY+OPrdkSxYotWyEPB9e5Y=
 			</data>
 		</dict>
 		<key>Modules/BlueConicClient.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VqD4pcvPWPKWEtfG0ZSUD29e62zPDpurcQVjwBVuDWY=
+			FHF0ojteX8nwxHwYcSJ1P339hXUqvSiiTk0PY2Ptdko=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

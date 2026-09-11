@@ -2,6 +2,25 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.3.0] 2026-09-10
+
+### Added
+- Added Interest Ranker plugin support. Interests can be scored from a level of the screen name, or from a key of an advanced event's object context behind optional equality filters.
+- Added object context support for advanced events. publishAdvancedEvent (and its async variant) and createEvent now accept a [String: String] context alongside the existing list-based context, exposed on AdvancedEvent as contextMap.
+
+### Changed
+- Updated the SDK to Swift 6 with strict concurrency checking.
+- Plugin properties are now preloaded before plugins are loaded rather than after, so a plugin's onLoad no longer reads an empty profile cache.
+
+### Fixed
+- Fixed issue where the Visit listener reset the first visit date and total visit count instead of keeping the values already on the profile or derived from the recorded visit timestamps.
+- Fixed issue where the Visit listener's ranged visit count measured visits from the epoch instead of over the configured number of days.
+- Fixed issue where a request that reached the 10 second timeout could crash instead of reporting a timeout, and left the underlying connection running.
+- Fixed issue where getProfile() and the commit log could observe partially initialized SDK state when called immediately after initialize.
+- Fixed issue where destroying plugins in an app with no registered plugins left the SDK rejecting every subsequent publish() call.
+- Fixed issue where requesting the device location could crash when a location update and a location error arrived at the same time.
+- Fixed issue where a rule configured with context position 0, or a position past the end of the context list, read out of bounds.
+
 ## [5.2.2] 2026-07-01
 
 ### Fixed

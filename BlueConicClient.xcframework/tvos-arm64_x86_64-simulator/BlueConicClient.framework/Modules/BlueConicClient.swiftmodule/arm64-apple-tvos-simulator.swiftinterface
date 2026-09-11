@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-tvos26.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BlueConicClient
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-compiler-version: Apple Swift version 6.3.3 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-tvos26.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -O -enable-experimental-feature DebugDescriptionMacro -module-name BlueConicClient
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import CoreLocation
 import Foundation
 import Swift
@@ -10,7 +10,7 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_inheritsConvenienceInitializers @objc public class BlueConicEventManager : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc public class BlueConicEventManager : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @objc public class func getInstance() -> BlueConicClient.BlueConicEventManager
   @objc public func publish(_ event: BlueConicClient.Event, callback: ((BlueConicClient.Callback) -> Swift.Void)?)
   @objc public func subscribe(_ eventName: Swift.String, callbackObject: any BlueConicClient.EventHandler, onlyOnce: Swift.Bool = false, identifier: Swift.String = UUID().uuidString)
@@ -22,6 +22,8 @@ import _SwiftConcurrencyShims
   @objc public func cleanup()
   @objc public func publishAdvancedEvent(eventName: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func publishAdvancedEventAsync(eventName: Swift.String, context: [Swift.String] = []) async -> BlueConicClient.BCResult
+  @objc(publishAdvancedEventWithEventName:objectContext:callback:) public func publishAdvancedEvent(eventName: Swift.String, context: [Swift.String : Swift.String], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
+  @objc(publishAdvancedEventAsyncWithEventName:objectContext:completionHandler:) public func publishAdvancedEventAsync(eventName: Swift.String, context: [Swift.String : Swift.String]) async -> BlueConicClient.BCResult
   @objc public func publishClickEvent(selector: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
   @objc public func publishClickEventAsync(selector: Swift.String, context: [Swift.String] = []) async -> BlueConicClient.BCResult
   @objc public func publishFormSubmitEvent(selector: Swift.String, context: [Swift.String] = [], callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
@@ -42,7 +44,7 @@ import _SwiftConcurrencyShims
   @objc override dynamic public init()
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class EngagementScoreListener : BlueConicClient.BlueConicPlugin {
+@_hasMissingDesignatedInitializers public class EngagementScoreListener : BlueConicClient.BlueConicPlugin, @unchecked Swift.Sendable {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
@@ -68,7 +70,7 @@ import _SwiftConcurrencyShims
   @objc public init(variantId: Swift.String, position: Swift.String, data: Swift.String)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class EngagementService : BlueConicClient.EventSerivceBase {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class EngagementService : BlueConicClient.EventSerivceBase, @unchecked Swift.Sendable {
   @objc deinit
   convenience public init(client: BlueConicClient.BlueConic, listenerId: Swift.String, propertyName: Swift.String, isInterest: Swift.Bool = false, allInterests: [Swift.String] = [], useHalfTime: Swift.Bool = false)
   @objc override public func handleEvent(_ event: BlueConicClient.Event)
@@ -83,20 +85,38 @@ import _SwiftConcurrencyShims
   @objc public func handleEvent(_ event: BlueConicClient.Event)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class EngagementRankingListener : BlueConicClient.BlueConicPlugin {
+@_hasMissingDesignatedInitializers public class EngagementRankingListener : BlueConicClient.BlueConicPlugin, @unchecked Swift.Sendable {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
   @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers public class BlueConicConfiguration : ObjectiveC.NSObject {
-  public var hostName: Swift.String
-  public var isDebugMode: Swift.Bool
-  public var appID: Swift.String
-  public var shared: Swift.Bool
-  public var simulatorUsername: Swift.String
-  public var simulatorMobileSessionId: Swift.String
+@objc @_hasMissingDesignatedInitializers public class BlueConicConfiguration : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  public var hostName: Swift.String {
+    get
+    set
+  }
+  public var appID: Swift.String {
+    get
+    set
+  }
+  public var simulatorUsername: Swift.String {
+    get
+    set
+  }
+  public var simulatorMobileSessionId: Swift.String {
+    get
+    set
+  }
+  public var isDebugMode: Swift.Bool {
+    get
+    set
+  }
+  public var shared: Swift.Bool {
+    get
+    set
+  }
   @objc @_inheritsConvenienceInitializers @objcMembers public class Builder : ObjectiveC.NSObject {
     @objc override dynamic public init()
     @objc public func setHostName(_ hostName: Swift.String) -> BlueConicClient.BlueConicConfiguration.Builder
@@ -114,7 +134,7 @@ import _SwiftConcurrencyShims
   @objc public func getName() -> Swift.String
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class BlueConic : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class BlueConic : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @objc public class func getInstance(_ context: UIKit.UIViewController?) -> BlueConicClient.BlueConic
   @objc public class func getInstance() -> BlueConicClient.BlueConic
   @objc public func initialize(_ configuration: BlueConicClient.BlueConicConfiguration, callback: ((BlueConicClient.Callback) -> Swift.Void)? = nil)
@@ -199,7 +219,7 @@ import _SwiftConcurrencyShims
   @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RuleService : BlueConicClient.EventSerivceBase {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RuleService : BlueConicClient.EventSerivceBase, @unchecked Swift.Sendable {
   public struct ProfileChange {
   }
   @objc convenience public init(listenerId: Swift.String)
@@ -237,7 +257,23 @@ import _SwiftConcurrencyShims
   @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
-public class GeofencingListener : BlueConicClient.BlueConicPlugin {
+@_hasMissingDesignatedInitializers public class InterestRankerListener : BlueConicClient.BlueConicPlugin, @unchecked Swift.Sendable {
+  @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
+  @objc public func onLoad()
+  @objc public func onDestroy()
+  @objc public func getPreloadProperties() -> [Swift.String]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class InterestRankerService : BlueConicClient.EventSerivceBase, @unchecked Swift.Sendable {
+  convenience public init(client: BlueConicClient.BlueConic, listenerId: Swift.String, determination: Swift.String, whitelist: BlueConicClient.JSON?, blacklist: [Swift.String])
+  public func applyRules(_ sources: [BlueConicClient.JSON])
+  @objc public func isChanged() -> Swift.Bool
+  @objc public func save()
+  @objc override public func handleEvent(_ event: BlueConicClient.Event)
+  public class func getScreenNameParts(_ screenName: Swift.String?, level: Swift.String?) -> [Swift.String]
+  @objc deinit
+}
+public class GeofencingListener : BlueConicClient.BlueConicPlugin, @unchecked Swift.Sendable {
   @objc required public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
@@ -268,7 +304,7 @@ public class GeofencingListener : BlueConicClient.BlueConicPlugin {
   @objc override dynamic public init()
   @objc deinit
 }
-public enum EventType : Swift.String {
+public enum EventType : Swift.String, Swift.Sendable {
   case CLICK
   case VIEW
   case CONVERSION
@@ -278,7 +314,7 @@ public enum EventType : Swift.String {
     get
   }
 }
-public enum OperationType : Swift.String {
+public enum OperationType : Swift.String, Swift.Sendable {
   case ADD
   case SET
   case INCREMENT
@@ -288,7 +324,7 @@ public enum OperationType : Swift.String {
     get
   }
 }
-@objc public class BCResult : ObjectiveC.NSObject {
+@objc public class BCResult : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @objc final public let success: Swift.Bool
   @objc final public let error: BlueConicClient.BCError?
   @objc public init(success: Swift.Bool, error: BlueConicClient.BCError? = nil)
@@ -664,12 +700,12 @@ extension BlueConicClient.JSON : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@_hasMissingDesignatedInitializers @objc public class Callback : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class Callback : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @objc final public let success: Swift.Bool
   @objc final public let error: BlueConicClient.BCError?
   @objc deinit
 }
-@objc public enum ErrorType : Swift.Int {
+@objc public enum ErrorType : Swift.Int, Swift.Sendable {
   case notEnabled
   case noNetworkConnectionError
   case alreadyEnabled
@@ -682,7 +718,7 @@ extension BlueConicClient.JSON : Swift.Codable {
     get
   }
 }
-@objc public class BCError : ObjectiveC.NSObject, Swift.Error {
+@objc public class BCError : ObjectiveC.NSObject, Swift.Error, @unchecked Swift.Sendable {
   @objc final public let type: BlueConicClient.ErrorType
   @objc final public let nsError: Foundation.NSError
   @objc final public let message: Swift.String?
@@ -735,7 +771,7 @@ extension BlueConicClient.JSON : Swift.Codable {
   @objc public func getValueFromParameters(key: Swift.String) -> Swift.String?
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class FormListener : BlueConicClient.BlueConicPlugin {
+@_hasMissingDesignatedInitializers public class FormListener : BlueConicClient.BlueConicPlugin, @unchecked Swift.Sendable {
   @objc convenience required public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   public func migrate() -> [Any]?
@@ -744,7 +780,7 @@ extension BlueConicClient.JSON : Swift.Codable {
   @objc public func getPreloadProperties() -> [Swift.String]
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class BehaviorListener : BlueConicClient.BlueConicPlugin {
+@_hasMissingDesignatedInitializers public class BehaviorListener : BlueConicClient.BlueConicPlugin, @unchecked Swift.Sendable {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func onDestroy()
@@ -771,8 +807,12 @@ extension Swift.KeyedDecodingContainer {
   @objc public var contextList: [Swift.String]? {
     @objc get
   }
+  @objc public var contextMap: [Swift.String : Swift.String] {
+    @objc get
+  }
   @objc public init(eventName: Swift.String)
   @objc public init(eventName: Swift.String, context: [Swift.String])
+  @objc(initWithEventName:objectContext:) public init(eventName: Swift.String, context: [Swift.String : Swift.String])
   @objc override public func message() -> Swift.String
   @objc deinit
 }
@@ -782,6 +822,7 @@ extension Swift.KeyedDecodingContainer {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ListenerUtil {
+  public class func resolveEventContext(_ config: BlueConicClient.JSON, contextList: [Swift.String]?, contextMap: [Swift.String : Swift.String]) -> [Swift.String]
   public class func contentContainsWord(_ rule: BlueConicClient.JSON, content: [Swift.String], interests: [Swift.String]) -> Swift.Bool
   public class func getWords(_ rule: BlueConicClient.JSON) -> [Swift.String]
   public class func getWords(_ words: [Swift.String]?) -> [Swift.String]
@@ -799,7 +840,7 @@ extension Swift.KeyedDecodingContainer {
   public class func getCurrentDate() -> Swift.String
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class RecommendationsDialogue : BlueConicClient.BlueConicPlugin {
+@_hasMissingDesignatedInitializers public class RecommendationsDialogue : BlueConicClient.BlueConicPlugin, @unchecked Swift.Sendable {
   @objc required convenience public init(client: BlueConicClient.BlueConic, context: BlueConicClient.InteractionContext)
   @objc public func onLoad()
   @objc public func getPreloadProperties() -> [Swift.String]
@@ -811,7 +852,7 @@ extension Swift.KeyedDecodingContainer {
   @objc override public init(selector: Swift.String, context: [Swift.String])
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class GlobalListener : BlueConicClient.BlueConicPlugin {
+@_hasMissingDesignatedInitializers public class GlobalListener : BlueConicClient.BlueConicPlugin, @unchecked Swift.Sendable {
   public var infoDictionary: [Swift.String : Any?] {
     get
     set

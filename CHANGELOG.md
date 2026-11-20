@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 `BlueConicClient` adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.3.1] 2026-11-20
+
+### Fixed
+- Re-signed BlueConicClient.xcframework with a new Apple certificate. The previous certificate was revoked, causing Xcode to report "The signature of 'BlueConicClient.xcframework' cannot be verified". No functional changes.
+
 ## [5.3.0] 2026-09-10
 
 ### Added

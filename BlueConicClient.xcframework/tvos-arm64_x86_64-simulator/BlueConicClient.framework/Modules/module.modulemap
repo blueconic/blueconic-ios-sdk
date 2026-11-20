@@ -1,3 +1,4 @@
 framework module BlueConicClient {
   header "BlueConicClient-Swift.h"
+  requires objc
 }

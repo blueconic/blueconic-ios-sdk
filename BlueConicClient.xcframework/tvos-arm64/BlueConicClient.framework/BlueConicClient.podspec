@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
     # BlueConic General
     spec.name               = 'BlueConicClient'
-    spec.version            = '5.3.0'
+    spec.version            = '5.3.1'
     spec.license            = { :type => 'Commercial', :file => 'LICENSE' }
     spec.swift_version      = '6.0'
     spec.homepage           = 'https://blueconic.com'
